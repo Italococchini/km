@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KMIMOS</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" >
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/datepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="css/kmimos_style.css">
+	</head>
+	<body>
+		<!-- MENU NAVBAR -->
+		<nav class="navbar navbar-fixed-top bg-transparent">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<img src="images/km-navbar-mobile.svg" width="30">
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="images/km-logo.svg" height="60"></a>
+				</div>
+				<ul class="hidden-xs nav-login">
+					<li><a href="#" style="padding-right: 15px">INICIAR SESIÓN</a></li>
+					<li><a href="#" style="padding-left: 15px; border-left: 1px solid white;">REGÍSTRATE</a></li>
+				</ul>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="km-resultado-grid.html" class="km-nav-link">BUSCAR CUIDADOR</a></li>
+						<li><a href="#" class="km-btn-primary hidden-xs">QUIERO SER CUIDADOR</a></li>
+						<li><a href="#" class="km-nav-link hidden-sm hidden-md hidden-lg">INICIAR SESIÓN</a></li>
+						<li><a href="#" class="km-nav-link hidden-sm hidden-md hidden-lg">REGÍSTRATE</a></li>
+						<li><a href="#" class="km-btn-primary hidden-sm hidden-md hidden-lg">QUIERO SER CUIDADOR</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- FIN MENU NAVBAR -->
+		<!-- HEADER SEARCH -->
+		<div class="header-search" style="background-image:url(images/km-fondo-buscador.gif);">
+			<div class="overlay"></div>
+		</div>
+		<!-- END HEADER SEARCH -->
+		<div class="container contentenedor-buscador-todos">
+			<div class="km-contentido-formulario-buscador">
+				<form class="km-formulario-buscador" action="" method="post">
+					<div class="km-bloque-cajas">
+						<div class="km-div-ubicacion">
+							<select class="km-select-custom km-select-ubicacion" name="">
+								<option>UBICACIÓN, ESTADO, MUNICIPIO</option>
+								<option>UBICACIÓN, A</option>
+								<option>UBICACIÓN, B</option>
+							</select>
+						</div>
+						<div class="km-div-fechas">
+							<input type="text" name="" placeholder="DESDE" value="" class="km-input-custom km-input-date date_from">
+							<input type="text" name="" placeholder="HASTA" value="" class="km-input-custom km-input-date date_to">
+						</div>
+						<div class="km-div-enviar">
+							<button type="submit" class="km-submit-custom" name="button">
+							BUSCAR
+							</button>
+						</div>
+					</div>
+					<div class="km-div-filtro">
+						<div class="km-titulo-filtro">
+							FILTRAR BÚSQUEDA
+						</div>
+						<div class="km-cajas-filtro">
+							<div class="km-caja-filtro">
+								<select class="km-select-custom" name="">
+									<option>TIPO DE SERVICIO</option>
+									<option>TIPO A</option>
+									<option>TIPO B</option>
+								</select>
+							</div>
+							<div class="km-caja-filtro">
+								<select class="km-select-custom" name="">
+									<option>TAMAÑO DE MASCOTA</option>
+									<option>TAMAÑO A</option>
+									<option>TAMAÑO B</option>
+								</select>
+							</div>
+							<div class="km-caja-filtro">
+								<select class="km-select-custom" name="">
+									<option>SERVICIOS ADICIONALES</option>
+									<option>SERVICIO A</option>
+									<option>SERVICIO B</option>
+								</select>
+							</div>
+							<div class="km-caja-filtro">
+								<input type="text" name="" value="" placeholder="BUSCAR POR CUIDADOR" class="km-input-custom">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="km-caja-resultados">
+				<div class="km-columna-izq">
+					<div class="km-superior-resultados">
+						<span class="km-texto-resultados">
+							<b>Resultado de búsqueda</b> 4 cuidadores disponibles
+						</span>
+						<div class="km-opciones-resultados">
+							<div class="km-vista-resultados">
+								<a href="./km-resultado.html" class="view-list">
+									List
+								</a>
+								<a href="./km-resultado-grid.html" class="view-grid active">
+									Gris
+								</a>
+							</div>
+							<div class="km-orden-resultados">
+								<select class="km-select-custom" name="">
+									<option>ORDENAR POR RANKING</option>
+									<option>ORDEN A</option>
+									<option>ORDEN B</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="km-premium">
+							<div class="km-premium-slider">
+								<div class="slide"><img src="images/km-premium/premium1.jpg"></div>
+								<div class="slide"><img src="images/km-premium/premium2.jpg"></div>
+								<div class="slide"><img src="images/km-premium/premium3.jpg"></div>
+								<div class="slide"><img src="images/km-premium/premium2.jpg"></div>
+								<div class="slide"><img src="images/km-premium/premium1.jpg"></div>
+								<div class="slide"><img src="images/km-premium/premium3.jpg"></div>
+							</div>
+						</div>
+					<div class="km-resultados-grid">
+						<div class="km-item-resultado">
+							<div class="km-foto">
+								<img src="images/img-cuidador-grid-1.png" width="100%">
+								<span class="km-contenedor-favorito">
+									<a href="#" class="km-link-favorito active"></a>
+								</span>
+							</div>
+							<div class="km-descripcion">
+								<h1>LUIS ANGEL DÍAZ</h1>
+								<p>15 años de experiencia</p>
+							</div>
+						</div>
+						<div class="km-item-resultado">
+							<div class="km-foto">
+								<img src="images/img-cuidador-grid-2.png" width="100%">
+								<span class="km-contenedor-favorito">
+									<a href="#" class="km-link-favorito active"></a>
+								</span>
+							</div>
+							<div class="km-descripcion">
+								<h1>MARÍA FERNANDA LÓPEZ</h1>
+								<p>8 años de experiencia</p>
+								<div class="km-ranking">
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#"></a>
+								</div>
+								<div class="km-sellos">
+									<img src="images/icon/icon-sello-1.svg" height="30">
+									<img src="images/icon/icon-sello-2.svg" height="30">
+									<img src="images/icon/icon-sello-3.svg" height="30">
+									<img src="images/icon/icon-sello-4.svg" height="30">
+								</div>
+							</div>
+						</div>
+						<div class="km-item-resultado">
+							<div class="km-foto">
+								<img src="images/img-cuidador-grid-3.png" width="100%">
+								<span class="km-contenedor-favorito">
+									<a href="#" class="km-link-favorito active"></a>
+								</span>
+							</div>
+							<div class="km-descripcion">
+								<h1>SOFIA VERGARA</h1>
+								<p>2 años de experiencia</p>
+								<div class="km-ranking">
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#"></a>
+								</div>
+								<div class="km-sellos">
+									<img src="images/icon/icon-sello-1.svg" height="30">
+									<img src="images/icon/icon-sello-2.svg" height="30">
+									<img src="images/icon/icon-sello-3.svg" height="30">
+									<img src="images/icon/icon-sello-4.svg" height="30">
+									<img src="images/icon/icon-sello-5.svg" height="30">
+									<img src="images/icon/icon-sello-6.svg" height="30">
+								</div>
+							</div>
+						</div>
+						<div class="km-item-resultado">
+							<div class="km-foto">
+								<img src="images/img-cuidador-grid-4.png" width="100%">
+								<span class="km-contenedor-favorito">
+									<a href="#" class="km-link-favorito active"></a>
+								</span>
+							</div>
+							<div class="km-descripcion">
+								<h1>PIERO FALCONI</h1>
+								<p>28 años de experiencia</p>
+								<div class="km-ranking">
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+								</div>
+								<div class="km-sellos">
+									<img src="images/icon/icon-sello-1.svg" height="30">
+									<img src="images/icon/icon-sello-2.svg" height="30">
+									<img src="images/icon/icon-sello-3.svg" height="30">
+									<img src="images/icon/icon-sello-4.svg" height="30">
+									<img src="images/icon/icon-sello-5.svg" height="30">
+									<img src="images/icon/icon-sello-6.svg" height="30">
+								</div>
+							</div>
+						</div>
+						<div class="km-item-resultado">
+							<div class="km-foto">
+								<img src="images/img-cuidador-grid-5.png" width="100%">
+								<span class="km-contenedor-favorito">
+									<a href="#" class="km-link-favorito active"></a>
+								</span>
+							</div>
+							<div class="km-descripcion">
+								<h1>CECILIA G.</h1>
+								<p>10 años de experiencia</p>
+								<div class="km-ranking">
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+								</div>
+								<div class="km-sellos">
+									<img src="images/icon/icon-sello-1.svg" height="30">
+									<img src="images/icon/icon-sello-2.svg" height="30">
+									<img src="images/icon/icon-sello-3.svg" height="30">
+									<img src="images/icon/icon-sello-4.svg" height="30">
+								</div>
+							</div>
+						</div>
+						<div class="km-item-resultado">
+							<div class="km-foto">
+								<img src="images/img-cuidador-grid-6.png" width="100%">
+								<span class="km-contenedor-favorito">
+									<a href="#" class="km-link-favorito active"></a>
+								</span>
+							</div>
+							<div class="km-descripcion">
+								<h1>MÓNICA S.</h1>
+								<p>8 años de experiencia</p>
+								<div class="km-ranking">
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+									<a href="#" class="active"></a>
+								</div>
+								<div class="km-sellos">
+									<img src="images/icon/icon-sello-1.svg" height="30">
+									<img src="images/icon/icon-sello-2.svg" height="30">
+									<img src="images/icon/icon-sello-3.svg" height="30">
+									<img src="images/icon/icon-sello-4.svg" height="30">
+									<img src="images/icon/icon-sello-5.svg" height="30">
+									<img src="images/icon/icon-sello-6.svg" height="30">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="km-columna-der">
+					<div class="km-titulo-mapa">
+						UBICACIÓN DE RESULTADOS EN MAPA
+					</div>
+					<div class="km-mapa">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60213.58451979711!2d-99.16786827616129!3d19.397319704299978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b7ae093630a7c9f!2sParque+M%C3%A9xico!5e0!3m2!1ses-419!2spe!4v1498354401011" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.es.min.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
