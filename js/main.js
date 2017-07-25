@@ -11,9 +11,9 @@ function menu(){
 	var w = $(window).width();
 	if($(this).scrollTop() > 10) {
 		$('.bg-transparent').addClass('bg-white');
-		$('.navbar-brand img').attr('src', 'images/km-logo-negro.png');
+		$('.navbar-brand img').attr('src', 'images/km-logos/km-logo-negro.png');
 		$('.navbar-toggle img').attr('src', 'images/km-navbar-mobile-negro.svg');
-		$('.nav .km-btn-primary').css('padding','10px 15px');
+		$('.nav li a').css('padding','10px 15px 8px');
 		$('.navbar-brand>img').css('height','40px');
 		$('.nav li:first-child a').addClass('pd-tb11');
 		$('.nav-login').addClass('dnone');
@@ -23,9 +23,9 @@ function menu(){
 		}
 	} else {
 		$('.bg-transparent').removeClass('bg-white');
-		$('.navbar-brand img').attr('src', 'images/km-logo.png');
+		$('.navbar-brand img').attr('src', 'images/km-logos/km-logo.png');
 		$('.navbar-toggle img').attr('src', 'images/km-navbar-mobile.svg');
-		$('.nav .km-btn-primary').css('padding','15px');
+		$('.nav li a').css('padding','19px 15px 15px');
 		$('.navbar-brand>img').css('height','60px');
 		$('.nav li:first-child a').removeClass('pd-tb11');
 		$('.nav-login').removeClass('dnone');

@@ -1,0 +1,78 @@
+
+.section.testimonials .title{
+    top:-9%;
+}
+
+/*.section.testimonials .slide .testimonial{
+    top:43.7%;
+    max-width:494px!important;
+}*/
+
+.section.testimonials .slide .testimonial{
+    background-position:49% top;
+    line-height: 26.47px;
+    letter-spacing: 0.1px;
+}
+
+.section.testimonials .title{
+    letter-spacing:2px;
+    line-height:19px;
+}
+
+.section.testimonials .title span{
+    display:block;
+    font-size:14px;
+    color:#FFF!important;
+    text-transform:initial;
+}
+
+.section.testimonials .slide .testimonial .testimonial_mensaje{
+    padding-left:31px;
+    text-align:center;
+    width:375px;
+    letter-spacing: 0.1px;
+}
+
+.section.testimonials .slide .testimonial .testimonial_mensaje, .consultora_cargo{
+    font-size: 16px;
+    font-weight:300;
+}
+
+.section.testimonials .slide .testimonial .author{
+    padding-bottom:22px;
+}
+
+.section.testimonials .slide .testimonial .video {
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+    transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    -webkit-transition:all 0.3s ease;
+}
+
+.section.testimonials .slide .testimonial .video:hover{
+    opacity:0.5;
+    transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+}
+
+.section.testimonials.desktop{
+    background:#eaeaea;
+}
+
+
+.seccionTestimonialsMobile{
+    padding-top:0px!important;
+}
+
+
+
+
+

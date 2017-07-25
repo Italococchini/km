@@ -3,39 +3,6 @@ body {
 	font-family: 'Gotham-Pro-Regular', arial, sans-serif;
 	font-size: 13px;
 }
-:focus {
-	outline: 0;
-}
-b {
-	font-family: 'Gotham-Pro-Medium',arial,sans-serif;
-}
-h2 {
-	color: #7DD1C4;
-	font-family: 'Poetsen';
-	font-size: 60px;
-	margin-top: 0;
-	letter-spacing: 1px;
-}
-h4 {
-	color: #6B1C9B;
-	font-family: 'Gotham-Pro-Bold',arial,sans-serif;
-	font-size: 18px;
-	line-height: 26px;
-	letter-spacing: 1px;
-}
-h4 span {
-	color: black;
-	font-family: 'Gotham-Pro-Regular',arial,sans-serif;
-}
-h5 {
-	font-size: 15px;
-	font-family: 'Gotham-Pro-Bold',arial,sans-serif;
-	letter-spacing: 1px;
-}
-p {
-	font-size: 12px;
-	line-height: 18px;
-}
 @font-face {
 	font-family: 'Poetsen';
 	src: url(../fonts/poetsen_one/PoetsenOne-Regular.ttf) format('truetype');
@@ -59,6 +26,51 @@ p {
 @font-face {
 	font-family: 'Gotham-Pro-Black';
 	src: url(../fonts/gotham_pro/gotham-pro-black.otf) format('opentype');
+}
+:focus {
+	outline: 0!important;
+}
+img {
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+b {
+	font-family: 'Gotham-Pro-Medium',arial,sans-serif;
+}
+h2 {
+	color: #7DD1C4;
+	font-family: 'Poetsen';
+	font-size: 60px;
+	margin-top: 0;
+	letter-spacing: 1px;
+}
+h4 {
+	color: #6B1C9B;
+	font-family: 'Gotham-Pro-Bold',arial,sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 1px;
+}
+h4 span {
+	color: black;
+	font-family: 'Gotham-Pro-Regular',arial,sans-serif;
+}
+h5 {
+	font-size: 15px;
+	font-family: 'Gotham-Pro-Bold',arial,sans-serif;
+	letter-spacing: 1px;
+}
+p {
+	font-size: 12px;
+	line-height: 18px;
+}
+.brd-lr {
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
 }
 .pd-tb5 {
 	padding-top: 5px!important;
@@ -97,7 +109,74 @@ p {
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 }
-
+.km-btn-fb {
+	background-color: #4366B4;
+	border-radius: 5px;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+.km-btn-border {
+	border: 1px solid black;
+	border-radius: 5px;
+    color: black;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+.km-btn-borderw {
+	background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 5px 0px 0px #480571;
+    color: #6B1C9B;
+    font-family: 'Gotham-Pro-Bold',arial,sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: block;
+    margin: 50px auto 0;
+    line-height: 100%;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+.km-btn {
+	background-color: #7DD1C4;
+    border-bottom: 3px solid #33e1be;
+    border-radius: 8px;
+    color: #6B1C9B;
+    font-family: 'Gotham-Pro-Bold',arial,sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: block;
+    margin: auto;
+    line-height: 100%;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+.km-btn-correo {
+	background-color: #33E1BE;
+	border-radius: 5px;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+.km-btn-secondary {
+	background-color: #6B1C9B;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    line-height: 100%;
+}
 .pd5 {
 	padding-left: 5px;
 	padding-right: 5px;
@@ -110,7 +189,28 @@ p {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-/* MENÚ NAVBAR */
+
+.fixed-bottom {
+	position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+section {
+	text-align: center;
+	padding: 60px 0;
+}
+
+
+
+
+
+
+
+
+/* MENÚ */
 .bg-transparent {
 	background-color: transparent;
 	transition: background-color .5s ease 0s;
@@ -135,6 +235,9 @@ p {
 	position: relative;
 	top: 0;
 }
+.nav>li>a {
+	line-height: 100%!important;
+}
 .nav>li>a:hover {
 	background-color: transparent;
 }
@@ -148,7 +251,7 @@ p {
 .nav-login {
 	color: white;
 	position: absolute;
-	top: -25px;
+	top: -20px;
 	right: 0;
 }
 .nav-login {
@@ -171,6 +274,9 @@ p {
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
+}
+.navbar-right {
+	padding-top: 3px;
 }
 .logo-img-mobile {
 	height: 30px;
@@ -197,12 +303,12 @@ p {
 	color: #6B1C9B;
 	font-weight: 700;
 }
-/* FIN MENÚ NAVBAR */
+/* FIN MENÚ */
 
 
 
 /* SECCIÓN 1 - KMIMOS VIDEOS */
-.km-hero-video {
+.km-video {
 	position: relative;
 	height: 550px;
 }
@@ -220,7 +326,7 @@ p {
 .km-credibilidad-titular h2 {
 	color: white;
 }
-.fullscreen-bg {
+.km-video-bg {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -229,7 +335,7 @@ p {
 	overflow: hidden;
 	z-index: -100;
 }
-.fullscreen-bg__video {
+.km-video-bgscreen {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -257,13 +363,11 @@ p {
 	border: 1px solid #e5e5e5;
 	color: black;
 	font-size: 11px;
-	font-family: 'Gotham-Pro-Medium'!important;
 	letter-spacing: 1px;
 	transition: all .3s ease-in-out;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	cursor: pointer;
-	font-family: 'Gotham-Pro-Bold',arial,sans-serif;
 	width: 100%;
 	padding: 14px;
 	border-radius: 8px;
@@ -340,28 +444,6 @@ p {
 	border-color: #33e1be;
 	top: -1px;
 }
-
-/* .km-opcion:hover{
-	background: #33e1be;
-	color: black;
-	transition: all .2s ease-in-out;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	text-decoration: none;
-	border: 1px solid #33e1be;
-}
-.km-opcion:hover .diblock {
-	display: none;
-	transition: all .3s ease-in-out;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-}
-.km-opcion:hover .dnone {
-	display: inline-block;
-	transition: all .3s ease-in-out;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-} */
 .km-formulario-cuidador img {
 	position: relative;
 	margin-right: 6px;
@@ -393,7 +475,6 @@ p {
 	color: #000!important;
 	font-size: 11px!important;
 	letter-spacing: 1px!important;
-	font-family: 'Gotham-Pro-Medium'!important;
 	-webkit-transform: translateY(0px)!important;
 			transform: translateY(0px)!important;
 }
@@ -401,7 +482,6 @@ p {
 	color: #000!important;
 	font-size: 11px!important;
 	letter-spacing: 1px!important;
-	font-family: 'Gotham-Pro-Medium'!important;
 	-webkit-transform: translateY(0px)!important;
 			transform: translateY(0px)!important;
 }
@@ -409,7 +489,6 @@ p {
 	color: #000!important;
 	font-size: 11px!important;
 	letter-spacing: 1px!important;
-	font-family: 'Gotham-Pro-Medium'!important;
 	-webkit-transform: translateY(0px)!important;
 			transform: translateY(0px)!important;
 }
@@ -417,7 +496,6 @@ p {
 	color: #000!important;
 	font-size: 11px!important;
 	letter-spacing: 1px!important;
-	font-family: 'Gotham-Pro-Medium'!important;
 	-webkit-transform: translateY(0px)!important;
 			transform: translateY(0px)!important;
 }
@@ -510,8 +588,11 @@ p {
 	min-width: 100%;
 	min-height: 100%;
 	width: 100%;
--webkit-transform: translateX(-50%) translateY(-50%);
-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+.km-testimoniales .bx-controls-direction {
+	display: none;
 }
 .km-testimonial-text {
 	margin: auto;
@@ -527,6 +608,7 @@ transform: translateX(-50%) translateY(-50%);
 	font-family: 'Poetsen';
 	font-size: 22px;
 	margin: 30px 0 20px;
+	padding: 0px 10px;
 }
 .km-video-testimonial {
 	margin: auto;
@@ -669,6 +751,7 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
 .km-vacaciones .col-sm-6 {
 	margin: 20px 0;
 }
+
 /*POPUP SERVICIOS*/
 #popup-servicios {
 	text-align: center;
@@ -679,7 +762,7 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
 	max-width: 850px;
 }
 #popup-servicios .modal-content {
-	padding: 30px;
+	padding: 30px 50px;
 }
 #popup-servicios .km-opcion {
 	padding: 20px 0;
@@ -706,172 +789,7 @@ button.close {
 	max-width: 100%!important;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) and (min-width: 768px) {
-	.km-opcion {
-		height: 70px;
-	}
-}
-@media (max-width: 900px) {
-	button.close {
-		right: 10px;
-		color: black;
-	}
-	button.close:hover {
-		color: black;
-	}
-}
-@media (min-width: 767px) {
-	.km-opcion:hover:before {
-		border-top: 6px solid #33e1be;
-		top: -1px;
-	}
-}
-@media (max-width: 767px) {
 
-
-.bx-wrapper .bx-prev, .bx-wrapper .bx-next {
-	display: none;
-}
-	h2 {
-		font-size: 35px;
-	}
-	h4 {
-		font-size: 16px;
-		line-height: 24px;
-	}
-	p {
-		line-height: 15px;
-	}
-	.bg-white {
-		height: 60px;
-	}
-	.navbar-brand>img {
-		height: 40px!important;
-		padding-left: 15px;
-		top: 5px;
-	}
-	.navbar {
-		padding-top: 30px!important;
-	}
-	.navbar-header {
-		margin-top: -22px;
-	}
-	.navbar-nav {
-		margin: 0px -15px;
-	}
-	.nav>li {
-		background: white;
-	}
-	ul.navbar-right li:last-child {
-		padding-left: 10px;
-		padding-right: 10px;
-		background-color: white;
-		display: flex;
-		padding-bottom: 10px;
-	}
-	.km-nav-link {
-		color: black;
-	}
-	.nav .principal {
-		float: none;
-		margin: 0 auto;
-	}
-	.km-hero-video {
-		height: 500px;
-	}
-	.km-servicios .km-opcion {
-		text-align: left;
-		padding-left: 20px;
-	}
-	.km-credibilidad-titular {
-		text-align: left;
-	}
-	.km-servicios .col-sm-3, .km-tamanio .col-sm-3, .km-fechas .col-sm-3, .km-fechas .col-sm-6 {
-		margin-bottom: 10px;
-	}
-	.km-cuidador .container {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.km-cuidador .km-formulario-cuidador {
-		border-radius: 0;
-		box-shadow: none;
-		padding: 30px 30px;
-	}
-	/* SECCIÓN 2 - KMIMOS BENEFICIOS */
-	.km-beneficios {
-		text-align: left;
-		margin: 20px 0;
-	}
-	.km-beneficios-text {
-		margin-top: 0px;
-	}
-	/* SECCIÓN 2 - KMIMOS CLUB */
-	.km-club {
-		margin-top: 0px;
-	}
-	.km-club .col-sm-6:nth-child(2) {
-		margin-top: 20px;
-	}
-	.km-club .col-sm-3 {
-		text-align: center;
-	}
-	.km-club .col-sm-3 h4 span{
-		display: block;
-	}
-	.km-club .col-sm-6 {
-		text-align: left;
-	}
-	.fullscreen-bg {
-		background: url('../images/km-videos/km-video-mobile.gif') center -40px / cover no-repeat;
-	}
-	.fullscreen-bg__video {
-		display: none;
-	}
-	#popup-servicios br {
-		display: none;
-	}
-	.km-servicios-adicionales .col-sm-3 {
-		margin-bottom: 10px;
-	}
-	#popup-servicios .modal-dialog {
-		width: auto;
-		padding: 0;
-	}
-	/* TESTIMONIALES */
-	.bx-viewport {
-		height: 300px!important;
-	}
-	.km-testimonial-text {
-		margin-top: 80px;
-	}
-	.km-testimonial {
-		font-size: 18px;
-	}
-	.km-testimoniales {
-		height: 500px;
-	}
-	.km-vacaciones {
-		padding: 100px 0;
-		height: 500px;
-	}
-	.km-club form {
-		padding-bottom: 0;
-	}
-	.km-premium-slider .slide {
-		width: 277px!important;
-	}
-	.bx-wrapper img {
-		width: 100%!important;
-	}
-}
-
-@media (max-width: 480px) {
-	.bx-wrapper .bx-pager a {
-		margin: 0 8px;
-	}
-}
 
 /* SEARCH */
 .header-search{
@@ -1392,6 +1310,491 @@ button.close {
 	padding-top: 15px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* KM FICHA CUIDADOR */
+.km-ficha-bg {
+	width: 100%;
+	height: 235px;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: -1;
+}
+
+.km-ficha-info-cuidador {
+	margin-top: -70px;
+	margin-bottom: 40px;
+}
+.km-ficha-info-cuidador .container {
+	position: relative;
+}
+.km-ficha-info-cuidador .col-sm-6 {
+	margin-top: 80px;
+}
+.km-ficha-info-cuidador .km-ranking {
+	display: inline-block;
+}
+.km-ficha-info-cuidador .km-ranking a {
+    width: 35px;
+    height: 30px;
+    background-size: 30px 30px;
+}
+.km-ficha-info-cuidador .km-ficha-cuidador {
+	text-align: center;
+}
+.km-ficha-info-cuidador .km-ficha-cuidador img {
+	max-width: 200px;
+}
+.km-tit-cuidador {
+	font-family: 'Gotham-Pro-Bold';
+	font-size: 30px;
+}
+.km-link-comentarios {
+	font-size: 10px;
+	color: rgb(142, 142, 142);
+	text-decoration: underline;
+	display: inline-block;
+	height: 30px;
+    vertical-align: middle;
+}
+.km-tit-ficha {
+	font-size: 13px;
+    font-family: 'Gotham-Pro-Bold';
+}
+
+.km-review {
+	text-align: center;
+}
+.km-calificacion {
+	display: inline-block;
+    font-size: 70px;
+    font-family: 'Gotham-Pro-Bold';
+    line-height: 100%;
+}
+.km-calificacion-icono {
+	display: inline-block;
+    text-align: left;
+    margin-left: 20px;
+    vertical-align: baseline;
+}
+
+a.km-btn-comentario {
+	height: 45px;
+    border: 1px solid black;
+    border-radius: 8px;
+    line-height: 45px;
+    font-family: 'Gotham-Pro-Bold';
+    text-align: center;
+    display: block;
+    color: black;
+    margin: 20px 0;
+}
+.km-desc-ficha-text img {
+	display: inline-block;
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+.km-desc-ficha-text .km-desc-ficha {
+	margin-bottom: 15px;
+	display: inline-block;
+}
+.km-desc-ficha p:first-child {
+	font-size: 9px;
+	margin: 0;
+}
+.km-desc-ficha p:last-child {
+	font-size: 16px;
+	margin: 0;
+}
+.km-costo {
+	background-color: white;
+	position: absolute;
+	top: 0;
+	right: 0;
+    padding: 10px 20px;
+	width: 300px;
+}
+.km-costo p {
+	padding-top: 10px;
+	margin: 0;
+}
+.km-tit-costo {
+    font-size: 28px;
+    font-family: 'Gotham-Pro-Bold';
+}
+
+
+/* SECCIÓN MEDIOS */
+.km-medios {
+	text-align: center;
+	padding: 40px 0;
+}
+.km-medios h4 {
+	margin-bottom: 40px;
+}
+.km-medios img {
+	width: 100%;
+	max-width: 230px;
+}
+/* FIN SECCIÓN MEDIOS */
+
+
+/* SECCIÓN REGISTRO CUIDADOR */
+.km-registro-exitoso {
+	background: url(../images/km-registro/registro-exitoso.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 750px;
+    position: absolute;
+}
+.km-registro-exitoso-text {
+    z-index: 3;
+    position: relative;
+    color: white;
+}
+
+
+
+/* PÁGINA QUIERO SER CUIDADOR */
+.km-hero-bg {
+	width: 100%;
+	height: 550px;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: -1;
+}
+.km-titular-cuidador {
+	color: white;
+    position: relative;
+    text-align: center;
+    top: 270px;
+    z-index: 4;
+}
+.km-titular-cuidador h2{
+	color: white;
+}
+/* SECCIÓN CÓMO SER CUIDADOR */
+.km-comosoycuidador {
+	background-color: #6B1C9B;
+	color: white;
+}
+.km-comosoycuidador h4 {
+	color: white;
+}	
+/* FIN SECCIÓN CÓMO SER CUIDADOR */
+/* FIN PÁGINA QUIERO SER CUIDADOR */
+
+
+
+/* SECCIÓN FOOTER */
+footer {
+	background-color: #f5f5f5;
+	padding: 50px 0;
+}
+footer input.form-control {
+	background-color: #f5f5f5;
+	height: 42px;
+	margin: 0;
+}
+footer input:focus::-webkit-input-placeholder, footer input:valid::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 13px;
+  -webkit-transform: translateY(0px);
+		  transform: translateY(0px);
+  visibility: visible !important;
+  font-family: 'Gotham-Pro-Regular', arial, sans-serif;
+}
+footer .btn {
+	background-color: #7DD1C4;
+	color: #6B1C9B;
+	font-family: 'Gotham-Pro-Bold';
+	padding: 10px 25px;
+}
+footer .input-group {
+	width: 90%;
+}
+footer a {
+	color: black;
+}
+footer .km-icon-redes {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	margin-right: 10px;
+}
+/* FIN SECCIÓN FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+	/* PÁGINA FICHA CUIDADOR */
+	.km-costo {
+		width: 250px;
+	}
+	/* FIN PÁGINA FICHA CUIDADOR */
+}
+@media (max-width: 992px) and (min-width: 768px) {
+	.km-opcion {
+		height: 70px;
+	}
+	/* PÁGINA FICHA CUIDADOR */
+	.km-costo {
+		width: 200px;
+	}
+	/* FIN PÁGINA FICHA CUIDADOR */
+}
+@media (max-width: 900px) {
+	button.close {
+		right: 10px;
+		color: black;
+	}
+	button.close:hover {
+		color: black;
+	}
+}
+@media (min-width: 767px) {
+	.km-opcion:hover:before {
+		border-top: 6px solid #33e1be;
+		top: -1px;
+	}
+	/* HOME */
+	
+	/* FIN HOME */
+
+	/* FOOTER */
+	footer .km-icon-redes svg {
+		transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	}
+	footer .km-icon-redes svg:hover {
+		fill: #7DD1C4;
+	}
+	/* FIN FOOTER */
+}
+@media (max-width: 767px) {
+	.bx-wrapper .bx-prev, .bx-wrapper .bx-next {
+		display: none;
+	}
+	h2 {
+		font-size: 35px;
+	}
+	h4 {
+		line-height: 24px;
+	}
+	p {
+		line-height: 15px;
+	}
+	section {
+		text-align: left;
+	}
+	.h5-sub {
+		font-size: 9px;
+	}
+	.bg-white {
+		height: 60px;
+	}
+	.navbar-brand>img {
+		height: 40px!important;
+		padding-left: 15px;
+		top: 5px;
+	}
+	.navbar {
+		padding-top: 30px!important;
+	}
+	.navbar-header {
+		margin-top: -22px;
+	}
+	.navbar-nav {
+		margin: 0px -15px;
+	}
+	.nav>li {
+		background: white;
+	}
+	ul.navbar-right li:last-child {
+		padding-left: 10px;
+		padding-right: 10px;
+		background-color: white;
+		display: flex;
+		padding-bottom: 10px;
+	}
+	.km-nav-link {
+		color: black;
+	}
+	.nav .principal {
+		float: none;
+		margin: 0 auto;
+	}
+	.km-video {
+		height: 500px;
+	}
+	.km-servicios .km-opcion {
+		text-align: left;
+		padding-left: 20px;
+	}
+	.km-credibilidad-titular {
+		text-align: left;
+	}
+	.km-servicios .col-sm-3, .km-tamanio .col-sm-3, .km-fechas .col-sm-3, .km-fechas .col-sm-6 {
+		margin-bottom: 10px;
+	}
+	.km-cuidador .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.km-cuidador .km-formulario-cuidador {
+		border-radius: 0;
+		box-shadow: none;
+		padding: 30px 30px;
+	}
+	/* SECCIÓN 2 - KMIMOS BENEFICIOS */
+	.km-beneficios {
+		text-align: left;
+		margin: 20px 0;
+	}
+	.km-beneficios-text {
+		margin-top: 0px;
+	}
+	/* SECCIÓN 2 - KMIMOS CLUB */
+	.km-club .col-sm-6:nth-child(2) {
+		margin-top: 20px;
+	}
+	.km-club .col-sm-3 {
+		text-align: center;
+	}
+	.km-club .col-sm-3 h4 span{
+		display: block;
+	}
+	.km-club .col-sm-6 {
+		text-align: left;
+	}
+	.km-video-bg {
+		background: url('../videos/km-home/km-video-mobile.gif') center -40px / cover no-repeat;
+	}
+	.km-video-bgscreen {
+		display: none;
+	}
+	#popup-servicios br {
+		display: none;
+	}
+	.km-servicios-adicionales .col-sm-3 {
+		margin-bottom: 10px;
+	}
+	#popup-servicios .modal-dialog {
+		width: auto;
+		padding: 0;
+	}
+	/* TESTIMONIALES */
+	.km-testimonial-text {
+		margin-top: 80px;
+	}
+	.km-testimonial {
+		font-size: 18px;
+	}
+	.km-testimoniales {
+		height: 500px;
+	}
+	.km-testimoniales .bx-wrapper img {
+		width: 100%!important;
+	}
+	.km-testimoniales .bx-viewport, .km-testimoniales .bxslider li{
+		height: 400px;
+	}
+
+
+
+	.km-vacaciones {
+		padding: 100px 0;
+		height: 500px;
+	}
+	.km-club {
+		margin-top: 0;
+	} 
+	.km-club form {
+		padding-bottom: 0;
+	}
+	.km-premium-slider .slide {
+		width: 277px!important;
+	}
+
+	/* PÁGINA FICHA CUIDADOR */
+	.km-costo {
+		width: 200px;
+	}
+	.km-ficha-info-cuidador {
+		text-align: center;
+	}
+	.km-ficha-info-cuidador .col-sm-6 {
+		margin-top: 30px;
+	}
+	.km-ficha-bg {
+	    height: 170px;
+	}
+	/* FIN PÁGINA FICHA CUIDADOR */
+
+	/* PÁGINA QUIERO SER CUIDADOR */
+	.km-hero-bg {
+		height: 400px;
+	}
+	.km-titular-cuidador {
+	    text-align: left;
+	    top: 160px;
+	}
+	.km-titular-cuidador .km-btn, .km-comosoycuidador .km-btn-borderw {
+		margin: 20px 0 0;
+	}
+	/* FIN PÁGINA QUIERO SER CUIDADOR */
+
+	/* SECCIÓN FOOTER */
+	footer .btn {
+		padding: 10px;
+	}
+	footer .input-group {
+		width: 100%;
+	}
+	footer .row .col-xs-12:nth-child(2) {
+		margin: 30px 0;
+	}
+	/* FIN SECCIÓN FOOTER */
+}
+@media (max-width: 480px) {
+	.bx-wrapper .bx-pager a {
+		margin: 0 8px;
+	}
+}
+
+
 @media all and (max-width: 991px) {
 	.km-caja-resultados .km-columna-izq,
 	.km-caja-resultados .km-columna-der{
@@ -1566,116 +1969,4 @@ button.close {
 		margin-right: 0;
 		margin-bottom: 2%;
 	}
-}
-
-
-
-
-
-
-
-
-
-
-/* KM FICHA CUIDADOR */
-.km-ficha-bg {
-	width: 100%;
-	height: 235px;
-	background-size: cover;
-	background-position: center;
-	position: relative;
-	z-index: -1;
-}
-
-.km-ficha-info-cuidador {
-	margin-top: -70px;
-	margin-bottom: 40px;
-}
-.km-ficha-info-cuidador .col-sm-6 {
-	margin-top: 80px;
-}
-.km-ficha-info-cuidador .km-ranking {
-	display: inline-block;
-}
-.km-ficha-info-cuidador .km-ranking a {
-    width: 35px;
-    height: 30px;
-    background-size: 30px 30px;
-}
-
-.km-tit-cuidador {
-	font-family: 'Gotham-Pro-Bold';
-	font-size: 30px;
-}
-.km-link-comentarios {
-	font-size: 10px;
-	color: rgb(142, 142, 142);
-	text-decoration: underline;
-	display: inline-block;
-	height: 30px;
-    vertical-align: middle;
-}
-.km-tit-ficha {
-	font-size: 13px;
-    font-family: 'Gotham-Pro-Bold';
-}
-
-.km-review {
-	text-align: center;
-}
-.km-calificacion {
-	display: inline-block;
-    font-size: 70px;
-    font-family: 'Gotham-Pro-Bold';
-    line-height: 100%;
-}
-.km-calificacion-icono {
-	display: inline-block;
-    text-align: left;
-    margin-left: 20px;
-    vertical-align: baseline;
-}
-
-a.km-btn-comentario {
-	height: 45px;
-    border: 1px solid black;
-    border-radius: 8px;
-    line-height: 45px;
-    font-family: 'Gotham-Pro-Bold';
-    text-align: center;
-    display: block;
-    color: black;
-    margin: 20px 0;
-}
-.km-desc-ficha-text img {
-	display: inline-block;
-	vertical-align: baseline;
-	margin-right: 10px;
-}
-.km-desc-ficha-text .km-desc-ficha {
-	margin-bottom: 15px;
-	display: inline-block;
-}
-.km-desc-ficha p:first-child {
-	font-size: 9px;
-	margin: 0;
-}
-.km-desc-ficha p:last-child {
-	font-size: 16px;
-	margin: 0;
-}
-
-.km-costo {
-	background-color: white;
-    width: 100%;
-    height: 150px;
-    padding-left: 10px
-}
-.km-costo p {
-	padding-top: 10px;
-	margin: 0;
-}
-.km-tit-costo {
-    font-size: 28px;
-    font-family: 'Gotham-Pro-Bold';
 }
