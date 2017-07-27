@@ -777,6 +777,12 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
 #popup-servicios .km-btn-primary {
 	line-height: 18px;
 }
+#popup-servicios .km-opcion img {
+	    position: relative;
+    margin-right: 6px;
+    width: 25px;
+    top: -3px;
+}
 button.close {
 	position: absolute;
 	right: -40px;
@@ -1519,7 +1525,9 @@ button.close {
 .km-ficha-info-cuidador .km-ficha-cuidador img {
 	max-width: 200px;
 }
-
+.banner-servicio img {
+	width: 100%;
+}
 .km-ficha-info {
 	margin-top: 20px;
 }
