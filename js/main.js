@@ -69,6 +69,10 @@ $(document).ready(function(){
 		$(this).toggleClass('km-opcionactivo');
 	});
 
+	$('.km-servicio-opcion').on('click', function(e) {
+		$(this).toggleClass('km-servicio-opcionactivo');
+	});
+
 	var $date_f = $(".date_from");
 	var $date_t = $(".date_to");
 

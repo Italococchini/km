@@ -224,6 +224,7 @@ section {
 .navbar {
 	padding-top: 30px;
 	min-height: 60px;
+	z-index: 4;
 }
 .navbar .container {
 	position: relative;
@@ -1333,7 +1334,6 @@ button.close {
 
 .km-ficha-info-cuidador {
 	margin-top: -70px;
-	margin-bottom: 40px;
 }
 .km-ficha-info-cuidador .container {
 	position: relative;
@@ -1355,6 +1355,10 @@ button.close {
 .km-ficha-info-cuidador .km-ficha-cuidador img {
 	max-width: 200px;
 }
+
+.km-ficha-info {
+	margin-top: 20px;
+}
 .km-tit-cuidador {
 	font-family: 'Gotham-Pro-Bold';
 	font-size: 30px;
@@ -1370,10 +1374,98 @@ button.close {
 .km-tit-ficha {
 	font-size: 13px;
     font-family: 'Gotham-Pro-Bold';
+    margin-bottom: 0;
 }
+
+
+
+.km-ficha-servicio {
+	background-color: #fafafa;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	margin-bottom: 30px;
+	width: 100%;
+}
+.km-ficha-servicio .servicio-tit {
+	color: #6B1C9B;
+	margin-bottom: 10px;
+}
+.km-ficha-servicio .servicio-tit img, .km-ficha-servicio .servicio-tit div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.km-ficha-servicio .servicio-tit div {
+	margin-left: 10px;
+}
+.km-servicio-opcion {
+	border: 1px solid #e5e5e5;
+	border-radius: 8px;
+	padding: 14px 0;
+	color: #929292;
+	font-size: 11px;
+	letter-spacing: 1px;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	position: relative;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.km-servicio-opcion:before {
+	content: "";
+	border-top: 6px solid #fafafa;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	border-radius: 8px;
+	left: 0;
+	right: 0;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+.km-servicio-opcionactivo {
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	color: black;
+}
+.km-servicio-opcionactivo:before {
+	border-color: #33e1be;
+	top: -1px;
+}
+.km-servicio-opcion img {
+	width: 25px;
+}
+.km-servicio-opcion .km-servicio-desc {
+	display: inline-block;
+	width: 66%;
+}
+.km-servicio-opcion .km-servicio-costo {
+	display: inline-block;
+	width: 30%;
+}
+
+
 
 .km-review {
 	text-align: center;
+}
+.km-review-categoria {
+	margin-bottom: 30px;
+}
+.km-review-categoria .km-ranking a {
+    width: 18px;
+    background-size: 16px 9px;
+}
+.km-review-categoria p {
+	font-family: 'Gotham-Pro-Medium';
+	font-size: 11px;
+	margin-bottom: 0;
 }
 .km-calificacion {
 	display: inline-block;
@@ -1387,6 +1479,20 @@ button.close {
     margin-left: 20px;
     vertical-align: baseline;
 }
+.km-comentario {
+	margin-top: 30px;
+	border-bottom: 1px solid #929292;
+}
+.km-comentario:last-child {
+	border: none;
+}	
+.km-comentario .col-xs-2 {
+	padding-right: 0;
+}
+.km-comentario .col-xs-2 .km-foto-comentario-cuidador {
+	border-radius: 100%;
+	width: 100%;
+}
 
 a.km-btn-comentario {
 	height: 45px;
@@ -1399,13 +1505,15 @@ a.km-btn-comentario {
     color: black;
     margin: 20px 0;
 }
+.km-desc-ficha-text {
+	margin: 10px 0 20px;
+}
 .km-desc-ficha-text img {
 	display: inline-block;
 	vertical-align: baseline;
 	margin-right: 10px;
 }
 .km-desc-ficha-text .km-desc-ficha {
-	margin-bottom: 15px;
 	display: inline-block;
 }
 .km-desc-ficha p:first-child {
@@ -1413,7 +1521,7 @@ a.km-btn-comentario {
 	margin: 0;
 }
 .km-desc-ficha p:last-child {
-	font-size: 16px;
+	font-size: 15px;
 	margin: 0;
 }
 .km-costo {
@@ -1472,7 +1580,7 @@ a.km-btn-comentario {
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	z-index: -1;
+	z-index: 1;
 }
 .km-titular-cuidador {
 	color: white;
@@ -1493,6 +1601,11 @@ a.km-btn-comentario {
 	color: white;
 }	
 /* FIN SECCIÓN CÓMO SER CUIDADOR */
+/* POPUPS REGISTRO */
+#popup-registro-cuidador1 .modal-content {
+	padding: 40px 20px;
+}
+/* FIN POPUPS REGISTRO */
 /* FIN PÁGINA QUIERO SER CUIDADOR */
 
 
@@ -1603,6 +1716,11 @@ footer .km-icon-redes {
 	}
 	/* FIN FOOTER */
 }
+@media (min-width: 410px) {
+	.km-ficha-datos br {
+		display: none;
+	}
+}	
 @media (max-width: 767px) {
 	.bx-wrapper .bx-prev, .bx-wrapper .bx-next {
 		display: none;
@@ -1760,6 +1878,28 @@ footer .km-icon-redes {
 	}
 	.km-ficha-bg {
 	    height: 170px;
+	}
+	.km-ficha-info-cuidador {
+		margin-bottom: 10px;
+	}
+	.km-ficha-info .nav-tabs {
+		margin-bottom: 20px;
+		border-bottom: 2px solid #afafaf;
+	}
+	.km-ficha-info .nav-tabs>li.active>a, .km-ficha-info .nav-tabs>li.active>a:focus, .km-ficha-info .nav-tabs>li.active>a:hover {
+	    color: black;
+	    cursor: pointer;
+	    background-color: #fff;
+	    border: transparent;
+	    font-family: 'Gotham-Pro-Bold';
+	    border-bottom: 4px solid black;
+	}
+	.km-ficha-info .nav-tabs>li>a, .km-ficha-info .nav-tabs>li>a:focus, .km-ficha-info .nav-tabs>li>a:hover {
+		color: #afafaf;
+	    cursor: pointer;
+	    background-color: #fff;
+	    border: transparent;
+	    font-family: 'Gotham-Pro-Light';
 	}
 	/* FIN PÁGINA FICHA CUIDADOR */
 
@@ -1958,6 +2098,7 @@ footer .km-icon-redes {
 	.km-resultados-lista .km-item-resultado .km-contenedor-descripcion-opciones{
 		width: 100%;
 	}
+
 }
 
 @media all and (max-width: 380px) {
@@ -1969,4 +2110,6 @@ footer .km-icon-redes {
 		margin-right: 0;
 		margin-bottom: 2%;
 	}
+
+
 }
