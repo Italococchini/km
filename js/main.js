@@ -81,6 +81,16 @@ $(document).ready(function(){
 		$(this).toggleClass('km-servicio-opcionactivo');
 	});
 
+	$(document).on("click", '.show-map-mobile', function ( e ) {
+		e.preventDefault();
+		$(".km-map-content").addClass("showMap");
+	});
+
+	$(document).on("click", '.km-map-content .km-map-close', function ( e ) {
+		e.preventDefault();
+		$(".km-map-content").removeClass("showMap");
+	});
+
 	var $date_f = $(".date_from");
 	var $date_t = $(".date_to");
 

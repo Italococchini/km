@@ -181,7 +181,7 @@ p {
 	letter-spacing: 1px;
 	text-align: center;
 	text-decoration: none;
-	border-bottom: 3px solid #350850;	
+	border-bottom: 3px solid #350850;
 }
 .pd5 {
 	padding-left: 5px;
@@ -1479,6 +1479,14 @@ button.close {
 
 
 /* KM FICHA CUIDADOR */
+.showMap{
+	display: block!important;
+}
+
+.km-map-close{
+	display: none;
+}
+
 .km-ficha-bg {
 	width: 100%;
 	height: 235px;
@@ -2318,4 +2326,48 @@ footer .km-icon-redes {
 	}
 
 
+}
+
+
+@media all and (max-width: 767px) {
+	.km-costo{
+		position: fixed;
+	    display: block!important;
+	    top: initial;
+	    left: 0;
+	    width: auto;
+	    bottom: 0;
+	    z-index: 99;
+	}
+
+	.km-map-content{
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	    z-index: 100;
+		position: fixed;
+		background: white;
+	}
+
+	.km-map-content .km-tit-ficha{
+		line-height: 30px;
+	}
+
+	.km-map-content .km-ficha-mapa iframe{
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		top: 30px;
+		position: absolute;
+		width: calc(100% - 20px);
+		min-height: calc(100% - 40px);
+	}
+
+	.km-map-content .km-map-close{
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: 5px;
+	}
 }
