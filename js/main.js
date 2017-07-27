@@ -65,6 +65,14 @@ $(document).ready(function(){
 	    maxSlides: 3,
 	    slideMargin: 10
 	  });
+
+	$('.km-galeria-cuidador-slider').bxSlider({
+	    slideWidth: 200,
+	    minSlides: 1,
+	    maxSlides: 3,
+	    slideMargin: 10
+	});
+
 	$('.km-opcion').on('click', function(e) {
 		$(this).toggleClass('km-opcionactivo');
 	});
