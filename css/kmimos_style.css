@@ -31,7 +31,7 @@ body {
 	outline: 0!important;
 }
 img {
-	user-drag: none; 
+	user-drag: none;
 	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-drag: none;
@@ -848,6 +848,156 @@ button.close {
 	-webkit-appearance:none;
 }
 
+.km-search-slider{
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.km-search-slider .km-search-title{
+	font-size: 11px;
+	line-height: 32px;
+}
+
+.km-search-slider .item-slide{
+	width: 200px;
+	color: #FFFFFF;
+	min-height: 220px;
+	position: relative;
+}
+
+.km-search-slider .item-slide .slide-mask{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	opacity: 0.7;
+	position: absolute;
+	background: #333333;
+}
+
+.km-search-slider .item-slide .slide-content{
+	z-index: 1;
+	display: block;
+	min-height: 220px;
+	position: relative;
+	padding: 10px 15px;
+}
+
+.km-search-slider .item-slide .slide-content .slide-price-distance{
+	text-align: right;
+}
+
+.km-search-slider .item-slide .slide-content .slide-price-distance .slide-price{
+	font-size: 9px;
+	line-height: 20px;
+}
+
+.km-search-slider .item-slide .slide-content .slide-profile{
+	margin-top: 20px;
+}
+
+.km-search-slider .item-slide .slide-content .slide-profile .slide-profile-image{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+}
+
+.km-search-slider .item-slide .slide-content .slide-name{
+	padding: 10px 0 3px 0;
+}
+
+.km-search-slider .item-slide .slide-content .slide-expertice{
+	font-size: 9px;
+}
+
+.km-search-slider .item-slide .slide-content .slide-ranking{
+	padding: 10px 0 12px 0;
+}
+
+.km-search-slider .item-slide .slide-content .slide-ranking .km-ranking a{
+	background-image: url(../images/icon/icon-hueso-yellow.svg);
+}
+
+.km-search-slider .item-slide .slide-content .slide-ranking .km-ranking a.active{
+	background-image: url(../images/icon/icon-hueso-color-yellow.svg);
+}
+
+.km-search-slider .item-slide .slide-content .slide-buttons a{
+	float: left;
+	display: block;
+	border: 1px solid #FFF;
+	width: 49%;
+	border-radius: 5px;
+	text-align: center;
+	color: #FFF;
+	font-size: 10px;
+	line-height: 25px;
+}
+
+.km-search-slider .item-slide .slide-content .slide-buttons a:last-child{
+	float: right;
+}
+
+.km-search-slider .item-slide .slide-content .slide-buttons::after{
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.km-search-slider .item-slide .slide-content .slide-price-distance .slide-price span{
+	font-size: 11px;
+	font-family: 'Gotham-Pro-bold', arial, sans-serif;
+}
+
+.km-search-slider .item-slide .slide-content .slide-price-distance .slide-distance{
+	font-size: 8px;
+}
+
+.km-btn-primary-new{
+	background-color: transparent;
+	border: 1px solid #7DD1C4;
+	color: #6B1C9B;
+	position: relative;
+	float: left;
+	border-radius: 8px;
+	font-family: 'Gotham-Pro',arial,sans-serif;
+	letter-spacing: 1px;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	z-index: 1;
+
+	padding: 0;
+	height: 34px;
+	line-height: 34px;
+	font-size: 10px;
+	font-weight: 300;
+}
+
+.km-opciones .km-btn-primary-new{
+	margin-top: 9px;
+}
+
+.km-search-slider .bx-controls{
+	display: none;
+}
+
+.km-btn-primary-new.basic,
+.km-btn-primary-new:hover{
+	color: #FFFFFF;
+	border-color: #6B1C9B;
+	background-color: #6B1C9B;
+	text-decoration: none;
+}
+
+.km-btn-primary-new.basic:hover{
+	text-decoration: underline;
+}
+
 .km-div-ubicacion{
 	float: left;
 	width: 42.890995%;
@@ -1041,7 +1191,7 @@ button.close {
 
 .km-opciones-resultados{
 	float: right;
-	width: 215px;
+	/*width: 215px;*/
 }
 
 .km-texto-resultados{
@@ -1485,7 +1635,7 @@ button.close {
 }
 .km-comentario:last-child {
 	border: none;
-}	
+}
 .km-comentario .col-xs-2 {
 	padding-right: 0;
 }
@@ -1599,7 +1749,7 @@ a.km-btn-comentario {
 }
 .km-comosoycuidador h4 {
 	color: white;
-}	
+}
 /* FIN SECCIÓN CÓMO SER CUIDADOR */
 /* POPUPS REGISTRO */
 #popup-registro-cuidador1 .modal-content {
@@ -1702,7 +1852,7 @@ footer .km-icon-redes {
 		top: -1px;
 	}
 	/* HOME */
-	
+
 	/* FIN HOME */
 
 	/* FOOTER */
@@ -1720,7 +1870,7 @@ footer .km-icon-redes {
 	.km-ficha-datos br {
 		display: none;
 	}
-}	
+}
 @media (max-width: 767px) {
 	.bx-wrapper .bx-prev, .bx-wrapper .bx-next {
 		display: none;
@@ -1858,7 +2008,7 @@ footer .km-icon-redes {
 	}
 	.km-club {
 		margin-top: 0;
-	} 
+	}
 	.km-club form {
 		padding-bottom: 0;
 	}
