@@ -859,7 +859,7 @@ button.close {
 }
 
 .km-search-slider .item-slide{
-	width: 200px;
+	width: 100%;
 	color: #FFFFFF;
 	min-height: 220px;
 	position: relative;
