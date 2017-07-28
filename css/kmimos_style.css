@@ -171,6 +171,7 @@ p {
 }
 .km-btn-secondary {
 	background-color: #6B1C9B;
+	border-bottom: 3px solid #350850;
     color: white;
     display: block;
     padding: 17px 0;
@@ -181,7 +182,15 @@ p {
 	letter-spacing: 1px;
 	text-align: center;
 	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+}
+.km-btn-secondary:hover {
+	background-color: #5b1586;
 	border-bottom: 3px solid #350850;
+	text-decoration: none;
+	color: white;
 }
 .pd5 {
 	padding-left: 5px;
@@ -1363,7 +1372,6 @@ button.close {
 .km-ranking a.active{
 	background-image: url(../images/icon/icon-hueso-color.svg);
 }
-
 .km-contenedor-descripcion-opciones::after{
 	content: "";
 	clear: both;
@@ -1488,7 +1496,9 @@ button.close {
 .showMap{
 	display: block!important;
 }
-
+.show-map-mobile {
+	margin: 10px 0 30px;
+}
 .km-map-close{
 	display: none;
 }
@@ -1511,13 +1521,22 @@ button.close {
 .km-ficha-info-cuidador .col-sm-6 {
 	margin-top: 80px;
 }
-.km-ficha-info-cuidador .km-ranking {
+.km-ficha-info-cuidador .km-ranking, .km-ficha-icon .km-ranking-cuidador {
 	display: inline-block;
 }
-.km-ficha-info-cuidador .km-ranking a {
-    width: 35px;
-    height: 30px;
-    background-size: 30px 30px;
+.km-ficha-icon {
+	margin-bottom: 10px;
+}
+.km-ficha-icon .km-ranking-cuidador p {
+	background: url(../images/icon/icon-hueso.svg) no-repeat center center;
+    float: left;
+    width: 40px;
+    height: 20px;
+    background-size: 40px 17px;
+    margin-bottom: 0;
+}
+.km-ficha-icon .km-ranking-cuidador p.active{
+	background-image: url(../images/icon/icon-hueso-color.svg);
 }
 .km-ficha-info-cuidador .km-ficha-cuidador {
 	text-align: center;
@@ -1540,7 +1559,6 @@ button.close {
 	color: rgb(142, 142, 142);
 	text-decoration: underline;
 	display: inline-block;
-	height: 30px;
     vertical-align: middle;
 }
 .km-tit-ficha {
@@ -1593,15 +1611,20 @@ button.close {
 }
 
 
-
+.km-galeria-cuidador {
+	margin: 10px 0 30px;
+}
 .km-galeria-cuidador .bx-wrapper {
 	max-width: 100%!important;
+}
+.km-galeria-cuidador .bx-pager {
+	display: none;
 }
 .km-ficha-servicio {
 	background-color: #fafafa;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 	padding: 10px;
-	margin-bottom: 30px;
+	margin: 10px 0 30px;
 	width: 100%;
 }
 .km-ficha-servicio .servicio-tit {
@@ -1672,13 +1695,23 @@ button.close {
 
 .km-review {
 	text-align: center;
+	margin-top: 30px;
 }
 .km-review-categoria {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
-.km-review-categoria .km-ranking a {
+.km-review-categoria .col-xs-6 {
+	margin-top: 10px;
+}
+.km-review-categoria .km-ranking-usuario p {
+	background: url(../images/icon/icon-hueso.svg) no-repeat center center;
+	float: left;
     width: 18px;
+    height: 9px;
     background-size: 16px 9px;
+}
+.km-ranking-usuario p.active{
+	background-image: url(../images/icon/icon-hueso-color.svg);
 }
 .km-review-categoria p {
 	font-family: 'Gotham-Pro-Medium';
@@ -1903,6 +1936,12 @@ footer .km-icon-redes {
 	.km-costo {
 		width: 200px;
 	}
+	.km-costo p {
+		font-size: 10px;
+	}
+	.km-costo .km-tit-costo {
+		font-size: 18px;
+	}
 	/* FIN PÁGINA FICHA CUIDADOR */
 	.km-ficha-fechas input {
 		width: 100%;
@@ -2089,9 +2128,6 @@ footer .km-icon-redes {
 	}
 
 	/* PÁGINA FICHA CUIDADOR */
-	.km-costo {
-		width: 200px;
-	}
 	.km-ficha-info-cuidador {
 		text-align: center;
 	}
@@ -2346,8 +2382,26 @@ footer .km-icon-redes {
 	    width: auto;
 	    bottom: 0;
 	    z-index: 99;
+	    padding: 10px 0 0;
 	}
-
+	.km-costo .km-tit-costo {
+	    position: absolute;
+    	bottom: 5px;
+	    font-size: 16px;
+	    left: 12px;
+	}
+	.km-costo p {
+		position: absolute;
+    	font-size: 9px;
+	    bottom: 28px;
+	    left: 12px;
+	}
+	.km-costo .km-btn-secondary {
+		float: right;
+		width: 50%;
+		border-radius: 0px;
+    	border: 0;
+	}
 	.km-map-content{
 		top: 0;
 		left: 0;
