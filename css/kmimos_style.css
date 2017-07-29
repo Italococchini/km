@@ -68,6 +68,9 @@ p {
 	font-size: 12px;
 	line-height: 18px;
 }
+a:hover {
+	text-decoration: none;
+}
 .brd-lr {
 	border-left: 1px solid #e5e5e5;
 	border-right: 1px solid #e5e5e5;
@@ -119,6 +122,18 @@ p {
     line-height: 100%;
     margin-bottom: 20px;
 }
+.km-btn-border img, .km-btn-fb img {
+    width: 14px;
+    position: relative;
+    top: -2px;
+    left: -5px;
+}
+.km-btn-correo img {
+    width: 14px;
+    position: relative;
+    top: -1px;
+    left: -5px;
+}
 .km-btn-border {
 	border: 1px solid black;
 	border-radius: 5px;
@@ -142,7 +157,8 @@ p {
     line-height: 100%;
     padding: 20px;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
 }
 .km-btn {
 	background-color: #7DD1C4;
@@ -157,7 +173,8 @@ p {
     line-height: 100%;
     padding: 20px;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
 }
 .km-btn-correo {
 	background-color: #33E1BE;
@@ -191,6 +208,21 @@ p {
 	border-bottom: 3px solid #350850;
 	text-decoration: none;
 	color: white;
+}
+.text-line {
+	display: inline-block;
+    text-align: center;
+    background-color: white;
+    padding: 0 20px;
+    left: 45%;
+    position: relative;
+}
+.bg-line {
+	width: 100%;
+    height: 1px;
+    background: #979797;
+    margin-top: -20px;
+    float: left;
 }
 .pd5 {
 	padding-left: 5px;
@@ -693,22 +725,23 @@ position: absolute;
 	margin-bottom: 0;
 	font-weight: 700;
 }
-input::-webkit-input-placeholder, button {
+
+.km-club input::-webkit-input-placeholder, button {
 	-moz-transition: all .3s ease-in-out;
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 	font-weight: 700;
 }
-form {
+.km-club form {
 	box-sizing: border-box;
 	padding-bottom: 40px;
 }
-form h1 {
+.km-club form h1 {
 	box-sizing: border-box;
 	padding: 20px;
 }
 
-input {
+.km-club input {
 	-webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, black 4%);
@@ -724,12 +757,12 @@ input {
 	border-bottom: solid 1px black;
 
 }
-input:focus, input:valid {
+.km-club input:focus, .km-club input:valid {
   box-shadow: none;
   outline: none;
   background-position: 0 0;
 }
-input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+.km-club input:focus::-webkit-input-placeholder, .km-club input:valid::-webkit-input-placeholder {
   color: #6B1C9B;
   font-size: 13px;
   -webkit-transform: translateY(-20px);
@@ -1808,21 +1841,6 @@ a.km-btn-comentario {
 /* FIN SECCIÓN MEDIOS */
 
 
-/* SECCIÓN REGISTRO CUIDADOR */
-.km-registro-exitoso {
-	background: url(../images/km-registro/registro-exitoso.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 750px;
-    position: absolute;
-}
-.km-registro-exitoso-text {
-    z-index: 3;
-    position: relative;
-    color: white;
-}
-
-
 
 /* PÁGINA QUIERO SER CUIDADOR */
 .km-hero-bg {
@@ -1853,8 +1871,98 @@ a.km-btn-comentario {
 }
 /* FIN SECCIÓN CÓMO SER CUIDADOR */
 /* POPUPS REGISTRO */
-#popup-registro-cuidador1 .modal-content {
+.popup-registro-cuidador, .popup-registro-cuidador-correo, .popup-registro-cuidador-paso1, .popup-registro-cuidador-paso2, .popup-registro-cuidador-paso3 {
 	padding: 40px 20px;
+}
+.form-registro {
+	text-align: left;
+	margin-bottom: 30px;
+}
+.form-registro fieldset {
+  position: relative;
+  border: none;  
+}
+
+.form-registro label {
+  position: absolute;  
+  top: 30px;
+  color: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+
+.form-registro input:focus ~ label {
+  color: #7DD1C4;  
+}
+
+.form-registro input:focus ~ label, .form-registro input:valid ~ label {
+	top: 15px;
+	transform: scale(0.7, 0.7);
+}
+
+.form-registro input {
+  font-size: 15px;  
+  width: 100%;
+  border: none;  
+  margin-top: 30px;
+}
+
+.form-registro input:focus {
+  outline: none;
+}
+
+.form-registro .after {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #7DD1C4 50%, transparent 50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: all 0.6s ease;
+}
+
+.form-registro  input:focus ~ .after {
+  background-position: 0 0;
+}
+.popup-registro-exitoso {
+	background: url(../images/km-registro/registro-exitoso.jpg) no-repeat;
+    height: 650px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.popup-registro-exitoso-text {
+    z-index: 3;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 200px 10px 0;
+}
+.popup-registro-cuidador-paso1, .popup-registro-cuidador-paso2, .popup-registro-cuidador-paso3 {
+	text-align: center;
+	position: relative;
+}
+.popup-registro-cuidador-paso1 a img {
+	width: 150px;
+	margin-bottom: 30PX;
+}
+.popup-registro-cuidador-paso1 textarea { 
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    resize: none;
+}
+.km-registro-tip {
+	width: 60px;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 150px;
+    right: 30px;
+    border-radius: 45px;
+    background: url(../images/icon/icon-tip.svg) no-repeat center center;
+    background-size: 32px;
 }
 /* FIN POPUPS REGISTRO */
 /* FIN PÁGINA QUIERO SER CUIDADOR */
