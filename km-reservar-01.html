@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reservación</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" >
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/datepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="css/kmimos_style.css">
+	</head>
+	<body class="page-reservation">
+		<div class="header">
+			<div class="km-content">
+				<a href="./"><img src="images/km-logos/km-logo-negro.png" height="46"></a>
+				<a href="#" class="btn-cuidador km-btn-primary">QUIERO SER CUIDADOR</a>
+			</div>
+		</div>
+
+		<div class="km-content km-content-reservation">
+			<div class="km-col-steps">
+				<div class="km-col-content">
+					<ul class="steps-numbers">
+						<li>
+							<span class="number active">1</span>
+						</li>
+						<li class="line"></li>
+						<li>
+							<span class="number">2</span>
+						</li>
+						<li class="line"></li>
+						<li>
+							<span class="number">3</span>
+						</li>
+					</ul>
+
+					<div class="km-title-step">
+						RESERVACIÓN
+					</div>
+
+					<div class="km-sub-title-step">
+						Reserva las fechas y los servicios con tu cuidora Daniela Castro
+					</div>
+
+					<div class="km-dates-step">
+						<div class="km-ficha-fechas">
+							<input type="text" name="" placeholder="DESDE" value="" class="date_from">
+							<input type="text" name="" placeholder="HASTA" value="" class="date_to">
+						</div>
+					</div>
+
+					<div class="km-content-step">
+						<div class="km-content-new-pet">
+							<div class="km-quantity-height">
+								<div class="km-quantity">
+									<a href="#" class="km-minus disabled">-</a>
+									<span class="km-number">1</span>
+									<a href="#" class="km-plus">+</a>
+								</div>
+
+								<div class="km-height">
+									<select class="km-height-select small">
+										<option value="small">PEQUEÑO 0 a 25cm</option>
+										<option value="medium">MEDIANO 25 a 58cm</option>
+										<option value="large">GRANDE 58cm a 73cm</option>
+										<option value="extra-large">GIGANTE 73cm a 200cm</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="km-services-content">
+								<div class="km-service-title">
+									SERVICIOS
+								</div>
+
+								<div class="km-services">
+									<div class="km-service-col">
+										<label class="optionCheckout" for="hospedaje_dia_noche">HOSPEDAJE DE DÍA Y NOCHE</label><br>
+										<label class="optionCheckout" for="guarderia_dia">GUARDERÍA DÍA</label>
+										<input type="checkbox" id="hospedaje_dia_noche" name="hospedaje_dia_noche" value="1" style="display: none;">
+										<input type="checkbox" id="guarderia_dia" name="guarderia_dia" value="1" style="display: none;">
+									</div>
+									<div class="km-service-col">
+										<label class="optionCheckout" for="paseos">PASEOS</label><br>
+										<label class="optionCheckout" for="entrenamientos">ENTRENAMIENTOS</label>
+										<input type="checkbox" id="paseos" name="hospedaje_dia_noche" value="1" style="display: none;">
+										<input type="checkbox" id="entrenamientos" name="guarderia_dia" value="1" style="display: none;">
+									</div>
+								</div>
+
+								<div class="km-service-title">
+									SERVICIOS ADICIONALES
+								</div>
+
+								<div class="km-services">
+									<div class="km-service-col">
+										<label class="optionCheckout" for="banio_secado">BAÑO Y SECADO ( $120.00)</label><br>
+										<label class="optionCheckout" for="limpieza_dental">LIMPIEA DENTAL ($80.00)</label>
+										<label class="optionCheckout" for="visita_veterinario">VISITA AL VETERINARIO ( $230.00)</label>
+										<input type="checkbox" id="banio_secado" name="banio_secado" value="1" style="display: none;">
+										<input type="checkbox" id="limpieza_dental" name="limpieza_dental" value="1" style="display: none;">
+										<input type="checkbox" id="visita_veterinario" name="visita_veterinario" value="1" style="display: none;">
+									</div>
+									<div class="km-service-col">
+										<label class="optionCheckout" for="acupuntura">ACUPUNTURA ($60.00)</label><br>
+										<label class="optionCheckout" for="transporte_sencillo">TRANSPORTE SENCILLO ($35.00)</label>
+										<label class="optionCheckout" for="transporte_redondo">TRANSPORTE REDONDO ($50.00)</label>
+										<input type="checkbox" id="acupuntura" name="acupuntura" value="1" style="display: none;">
+										<input type="checkbox" id="transporte_sencillo" name="transporte_sencillo" value="1" style="display: none;">
+										<input type="checkbox" id="transporte_redondo" name="transporte_redondo" value="1" style="display: none;">
+									</div>
+								</div>
+							</div>
+
+							<div class="km-services-total">
+								<span class="km-text-total">TOTAL</span>
+								<span class="km-price-total">$420.00</span>
+							</div>
+
+						</div>
+						<a href="#" class="btn-add-new-pet">
+							<span>AGREGAR NUEVA MASCOTA</span>
+						</a>
+					</div>
+
+					<div class="km-text-end-form">
+						* Precio final (incluye cobertura veterinaria y gastos administrativos; no incluye servicios adicionales)
+					</div>
+
+					<a href="./km-reservar-02.html" class="km-end-btn-form">
+						<span>SIGUIENTE</span>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="km-col-empty">
+				<br><br><br><br><br><br><br><br>
+				<img src="images/km-reserva/bg-cachorro.png" style="max-width: 100%;">
+			</div>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.es.min.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

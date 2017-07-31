@@ -91,6 +91,73 @@ $(document).ready(function(){
 		$(".km-map-content").removeClass("showMap");
 	});
 
+	$(document).on("click", '.page-reservation .km-quantity .km-minus', function ( e ) {
+		e.preventDefault();
+		var el = $(this);
+		var div = el.parent();
+		var span = $(".km-number", div);
+		if ( span.html() > 1 ) {
+			span.html( span.html() - 1 );
+		}
+
+		if ( span.html() <= 1 ) {
+			el.addClass("disabled");
+		}
+	});
+
+	$(document).on("click", '.page-reservation .km-quantity .km-plus', function ( e ) {
+		e.preventDefault();
+		var el = $(this);
+		var div = el.parent();
+		var span = $(".km-number", div);
+		var minus = $(".km-minus", div);
+		span.html( parseInt(span.html()) + 1 );
+
+		if ( span.html() > 1 ) {
+			minus.removeClass("disabled");
+		}
+	});
+
+	$(document).on("change", '.page-reservation .km-height-select', function ( e ) {
+		e.preventDefault();
+		var el = $(this);
+		el.removeClass("small");
+		el.removeClass("medium");
+		el.removeClass("large");
+		el.removeClass("extra-large");
+
+		el.addClass( el.val() );
+	});
+
+	$(document).on("click", '.page-reservation .optionCheckout', function ( e ) {
+		e.preventDefault();
+		var el = $(this);
+		el.toggleClass("active");
+	});
+
+	$(document).on("click", '.page-reservation .km-method-paid-options .km-method-paid-option', function ( e ) {
+		e.preventDefault();
+		var el = $(this);
+		$(".km-method-paid-option", el.parent()).removeClass("active");
+
+		el.addClass("active");
+
+		$(".km-end-btn-form-disabled").hide();
+		$(".km-end-btn-form-enabled").show();
+
+		if ( el.hasClass("km-option-deposit") ) {
+			$(".page-reservation .km-detail-paid-deposit").slideDown("fast");
+		} else {
+			$(".page-reservation .km-detail-paid-deposit").slideUp("fast");
+		}
+	});
+
+	$(document).on("click", '.page-reservation .list-dropdown .km-tab-link', function ( e ) {
+		e.preventDefault();
+		var el = $(this);
+		$(".km-tab-content", el.parent()).slideToggle("fast");
+	});
+
 	var $date_f = $(".date_from");
 	var $date_t = $(".date_to");
 
@@ -107,5 +174,15 @@ $(document).ready(function(){
 		onSelect: function (fd, date) {
 			$date_f.data('datepicker').update('maxDate', date);
 		}
+	});
+
+	$(document).on("focus", "input.input-label-placeholder", function(){
+		$(this).parent().addClass("focus");
+	}).on("blur", "input.input-label-placeholder", function(){
+		let i = $(this);
+		if ( i.val() !== "" ) $(this).parent().addClass("focused");
+		else $(this).parent().removeClass("focused");
+
+		$(this).parent().removeClass("focus");
 	});
 });
