@@ -185,4 +185,18 @@ $(document).ready(function(){
 
 		$(this).parent().removeClass("focus");
 	});
+
+	$(document).on("click", '.popup-registro-cuidador .km-btn-correo', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-content-cuidador").hide();
+		$(".popup-registro-cuidador-correo").fadeIn("fast");
+	});
+
+	$(document).on("click", '.popup-registro-cuidador-correo .km-link-login', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-content-cuidador").hide();
+		$(".popup-registro-cuidador").fadeIn("fast");
+	});
 });

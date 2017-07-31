@@ -1874,6 +1874,15 @@ a.km-btn-comentario {
 .popup-registro-cuidador, .popup-registro-cuidador-correo, .popup-registro-cuidador-paso1, .popup-registro-cuidador-paso2, .popup-registro-cuidador-paso3 {
 	padding: 40px 20px;
 }
+
+.popup-content-cuidador{
+	display: none;
+}
+
+.popup-content-cuidador.active{
+	display: block;
+}
+
 .form-registro {
 	text-align: left;
 	margin-bottom: 30px;
