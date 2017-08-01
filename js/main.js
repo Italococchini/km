@@ -1,3 +1,166 @@
+function initMap() {
+	var myLatLng = {
+		lat: 19.4326077,
+		lng: -99.13320799999997
+	};
+
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: myLatLng,
+		scrollwheel: false,
+		zoom: 16
+	});
+
+	// Cuidador 1
+	var infowindow1 = new google.maps.InfoWindow;
+	infowindow1.setContent('<h1 class="maps">LUIS ANGEL DÍAZ</h1>'
+						 +'<p>15 años de experiencia</p>'
+						 +'<div class="km-ranking">'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#"></a>'
+						 +'</div>'
+						 +'<div class="km-sellos maps">'
+						 +'    <img src="images/icon/icon-sello-1.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-2.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-3.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-4.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-5.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-6.svg" height="40">'
+					 	 +'</div>'
+						 +'<div class="km-opciones maps">'
+						 +'    <div class="precio">MXN $ 96</div>'
+						 +'    <div class="distancia">A 96 km de tu búsqueda</div>'
+						 +'    <a href="#" class="km-btn-primary-new stroke">CONÓCELO +</a>'
+						 +'    <a href="./km-reservar-01.html" class="km-btn-primary-new basic">RESERVA</a>'
+						 +'</div>');
+
+	var marker1 = new google.maps.Marker({
+		map: map,
+		position: myLatLng,
+		title: 'Hello World!'
+	});
+
+	marker1.addListener('click', function() {
+		infowindow1.open(map, marker1);
+	});
+
+	// Cuidador 2
+	var myLatLng2 = {
+		lat: 19.43316706900312,
+		lng: -99.13476705551147
+	};
+	var infowindow2 = new google.maps.InfoWindow;
+	infowindow2.setContent('<h1 class="maps">MARÍA FERNANDA LÓPEZ</h1>'
+						 +'<p>3 años de experiencia</p>'
+						 +'<div class="km-ranking">'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#"></a>'
+						 +'    <a href="#"></a>'
+						 +'</div>'
+						 +'<div class="km-sellos maps">'
+						 +'    <img src="images/icon/icon-sello-1.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-2.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-3.svg" height="40">'
+					 	 +'</div>'
+						 +'<div class="km-opciones maps">'
+						 +'    <div class="precio">MXN $ 150</div>'
+						 +'    <div class="distancia">A 40 km de tu búsqueda</div>'
+						 +'    <a href="#" class="km-btn-primary-new stroke">CONÓCELO +</a>'
+						 +'    <a href="./km-reservar-01.html" class="km-btn-primary-new basic">RESERVA</a>'
+						 +'</div>');
+
+	var marker2 = new google.maps.Marker({
+		map: map,
+		position: myLatLng2,
+		title: 'Hello World!'
+	});
+
+	marker2.addListener('click', function() {
+		infowindow2.open(map, marker2);
+	});
+
+	// Cuidador 3
+	var myLatLng3 = {
+		lat: 19.43187200891054,
+		lng: -99.1347187757492
+	};
+	var infowindow3 = new google.maps.InfoWindow;
+	infowindow3.setContent('<h1 class="maps">SOFÍA VERGARA</h1>'
+						 +'<p>2 años de experiencia</p>'
+						 +'<div class="km-ranking">'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#"></a>'
+						 +'</div>'
+						 +'<div class="km-sellos maps">'
+						 +'    <img src="images/icon/icon-sello-4.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-5.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-6.svg" height="40">'
+					 	 +'</div>'
+						 +'<div class="km-opciones maps">'
+						 +'    <div class="precio">MXN $ 45</div>'
+						 +'    <div class="distancia">A 40 km de tu búsqueda</div>'
+						 +'    <a href="#" class="km-btn-primary-new stroke">CONÓCELO +</a>'
+						 +'    <a href="./km-reservar-01.html" class="km-btn-primary-new basic">RESERVA</a>'
+						 +'</div>');
+
+	var marker3 = new google.maps.Marker({
+		map: map,
+		position: myLatLng3,
+		title: 'Hello World!'
+	});
+
+	marker3.addListener('click', function() {
+		infowindow3.open(map, marker3);
+	});
+
+	// Cuidador 4
+	var myLatLng4 = {
+		lat: 19.43200859776683,
+		lng: -99.13255155086517
+	};
+	var infowindow4 = new google.maps.InfoWindow;
+	infowindow4.setContent('<h1 class="maps">MÓNICA S.</h1>'
+						 +'<p>18 años de experiencia</p>'
+						 +'<div class="km-ranking">'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'    <a href="#" class="active"></a>'
+						 +'</div>'
+						 +'<div class="km-sellos maps">'
+						 +'    <img src="images/icon/icon-sello-1.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-2.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-3.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-4.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-5.svg" height="40">'
+						 +'    <img src="images/icon/icon-sello-6.svg" height="40">'
+					 	 +'</div>'
+						 +'<div class="km-opciones maps">'
+						 +'    <div class="precio">MXN $ 68</div>'
+						 +'    <div class="distancia">A 40 km de tu búsqueda</div>'
+						 +'    <a href="#" class="km-btn-primary-new stroke">CONÓCELO +</a>'
+						 +'    <a href="./km-reservar-01.html" class="km-btn-primary-new basic">RESERVA</a>'
+						 +'</div>');
+
+	var marker4 = new google.maps.Marker({
+		map: map,
+		position: myLatLng4,
+		title: ''
+	});
+
+	marker4.addListener('click', function() {
+		infowindow4.open(map, marker4);
+	});
+}
+
 function playVideo(e) {
 	var el = $(e);
 	var p = el.parent().parent().parent();
@@ -36,8 +199,36 @@ function menu(){
 	}
 }
 
+function mapStatic( e ){
+	var w = $(e);
+
+	console.log(w.width());
+
+	if ( w.width() > 991 ) {
+		var scrollTop = w.scrollTop();
+		var mapPrin = $(".km-caja-resultados");
+		var mapElem = $(".km-caja-resultados .km-columna-der");
+		var offset = mapPrin.offset();
+		var topPre = 41;
+
+		if ( scrollTop > 290 ) {
+			mapElem.addClass("mapAbsolute");
+			var topSumar = scrollTop - offset.top + topPre;
+			mapElem.css({
+				top: topSumar
+			});
+		} else {
+			mapElem.removeClass("mapAbsolute");
+		}
+	}
+}
+
 $(window).resize(function() {
 	menu();
+});
+
+$(window).scroll(function() {
+	mapStatic( this );
 });
 
 $(document).ready(function(){
@@ -48,23 +239,24 @@ $(document).ready(function(){
 	});
 
 	$('.bxslider').bxSlider({
-	  buildPager: function(slideIndex){
-		switch(slideIndex){
-		  case 0:
-			return '<img src="images/km-testimoniales/thumbs/testimonial-1.jpg">';
-		  case 1:
-			return '<img src="images/km-testimoniales/thumbs/testimonial-2.jpg">';
-		  case 2:
-			return '<img src="images/km-testimoniales/thumbs/testimonial-3.jpg">';
+		buildPager: function(slideIndex){
+			switch(slideIndex){
+				case 0:
+					return '<img src="images/km-testimoniales/thumbs/testimonial-1.jpg">';
+				case 1:
+					return '<img src="images/km-testimoniales/thumbs/testimonial-2.jpg">';
+				case 2:
+					return '<img src="images/km-testimoniales/thumbs/testimonial-3.jpg">';
+			}
 		}
-	  }
 	});
 	$('.km-premium-slider').bxSlider({
-	    slideWidth: 200,
-	    minSlides: 1,
-	    maxSlides: 3,
-	    slideMargin: 10
-	  });
+		slideWidth: 200,
+		minSlides: 1,
+		maxSlides: 3,
+		slideMargin: 10
+	});
+
 
 	$('.km-galeria-cuidador-slider').bxSlider({
 	    slideWidth: 200,
@@ -200,6 +392,7 @@ $(document).ready(function(){
 		$(".popup-registro-cuidador").fadeIn("fast");
 	});
 
+
 	$(document).on("click", '.popup-registro-cuidador-correo .registro-exitoso', function ( e ) {
 		e.preventDefault();
 
@@ -230,4 +423,18 @@ $(document).ready(function(){
 	});
 	// FIN POPUP INICIAR SESIÓN
 
+
+	$(document).on("click", '.km-caja-resultados .km-columna-der .closeMap', function ( e ) {
+		e.preventDefault();
+
+		$(this).parent().parent().fadeOut("fast");
+	});
+
+	$(document).on("click", '.btnOpenPopupMap', function ( e ) {
+		e.preventDefault();
+
+		$(".km-caja-resultados .km-columna-der").fadeIn("fast");
+
+		google.maps.event.trigger(map, 'resize');
+	});
 });
