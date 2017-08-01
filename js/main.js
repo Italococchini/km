@@ -202,7 +202,9 @@ function menu(){
 function mapStatic( e ){
 	var w = $(e);
 
-	if ( w > 991 ) {
+	console.log(w.width());
+
+	if ( w.width() > 991 ) {
 		var scrollTop = w.scrollTop();
 		var mapPrin = $(".km-caja-resultados");
 		var mapElem = $(".km-caja-resultados .km-columna-der");
