@@ -1515,6 +1515,38 @@ button.close {
 	padding-top: 15px;
 }
 
+.km-resultados-grid .km-item-resultado .km-descripcion .km-buttons::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.km-resultados-grid .km-item-resultado .km-descripcion .km-buttons a{
+	float: left;
+	width: 49%;
+	font-size: 10px;
+	text-align: center;
+	display: block;
+	border: 1px solid #7DD1C4;
+	line-height: 31px;
+	border-radius: 5px;
+	color: #7DD1C4;
+}
+
+.km-resultados-grid .km-item-resultado .km-descripcion .km-buttons{
+	padding-top: 15px;
+}
+
+.km-resultados-grid .km-item-resultado .km-descripcion .km-buttons a:last-child{
+	float: right;
+}
+
+.km-resultados-grid .km-item-resultado .km-descripcion .km-buttons a.active,
+.km-resultados-grid .km-item-resultado .km-descripcion .km-buttons a:hover{
+	background: #7DD1C4;
+	color: #FFFFFF;
+}
+
 
 
 
@@ -2772,6 +2804,11 @@ h1.maps{
 	display: none;
 }
 
+
+.km-item-resultado .km-descripcion h1{
+	font-family: Lato, Arial!important;
+	font-weight: bold;
+}
 
 .btnOpenPopup{
 	position: fixed;
