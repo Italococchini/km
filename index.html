@@ -28,10 +28,12 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="km-resultado.html" class="km-nav-link">BUSCAR CUIDADOR</a></li>
-						<li><a href="km-cuidador.html" class="km-btn-primary hidden-xs">QUIERO SER CUIDADOR</a></li>
+						<!-- <li><a href="km-cuidador.html" class="km-btn-primary hidden-xs">QUIERO SER CUIDADOR</a></li> -->
+						<li><a href="#popup-registro-cuidador1" class="km-btn-primary hidden-xs" role="button" data-toggle="modal">QUIERO SER CUIDADOR</a></li>
 						<li><a href="#" class="km-nav-link hidden-sm hidden-md hidden-lg">INICIAR SESIÓN</a></li>
 						<li><a href="#" class="km-nav-link hidden-sm hidden-md hidden-lg">REGÍSTRATE</a></li>
-						<li><a href="km-cuidador.html" class="km-btn-primary hidden-sm hidden-md hidden-lg">QUIERO SER CUIDADOR</a></li>
+						<!-- <li><a href="km-cuidador.html" class="km-btn-primary hidden-sm hidden-md hidden-lg">QUIERO SER CUIDADOR</a></li> -->
+						<li><a href="#popup-registro-cuidador1" class="km-btn-primary hidden-sm hidden-md hidden-lg" role="button" data-toggle="modal">QUIERO SER CUIDADOR</a></li>
 					</ul>
 				</div>
 			</div>
@@ -54,6 +56,147 @@
 			</div>
 		</div>
 		<!-- FIN SECCIÓN 1 - PARTE VIDEO -->
+		<!-- POPUPS REGISTRO -->
+		<div id="popup-registro-cuidador1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<div class="popup-content-cuidador popup-registro-cuidador active">
+						<a href="#" class="km-btn-fb"><img src="images/icon/km-redes/icon-fb-blanco.svg">Registrarme con Facebook</a>
+						<a href="#" class="km-btn-border"><img src="images/icon/km-redes/icon-gmail.svg">Registrarme con Google</a>
+						<p class="text-line">o</p>
+						<div class="bg-line"></div>
+						<a href="#" class="km-btn-correo"><img src="images/icon/km-redes/icon-mail-blanco.svg">Registrarte por un correo electrónico</a>
+						<p style="color: #979797">Al crear una cuenta, aceptas las condiciones del servicio y la Política de privacidad de Kmimos.</p>
+						<p><b>Dudas escríbenos</b></p>
+						<div class="row">
+							<div class="col-xs-4"><p><img style="width: 20px; margin-right: 5px; position: relative; top: -3px;" src="images/icon/km-redes/icon-wsp.svg">Whatsapp</p></div>
+							<div class="col-xs-4"><p><a href="#"><img style="width: 15px; margin-right: 5px; position: relative; top: -1px;" src="images/icon/km-redes/icon-mail.svg">a.vera@kmimos.la</a></p></div>
+							<div class="col-xs-4"><p><img style="width: 12px; margin-right: 5px; position: relative; top: -1px;" src="images/icon/km-redes/icon-cel.svg">(55) 6178 0320</p></div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-xs-5">
+								<p>¿Ya tienes una cuenta?</p>
+							</div>
+							<div class="col-xs-7">
+								<a href="#" class="km-btn-border"><b>INICIAR SESIÓN</b></a>
+							</div>
+						</div>
+					</div>
+					<div class="popup-content-cuidador popup-registro-cuidador-correo">
+						<p style="color: #979797; text-align: center;">Regístrate por <a href="#">Facebook</a> o <a href="#">Google</a></a></p>
+						<form class="form-registro">
+							<fieldset>
+								<input id="km-nombre" type="text" name="km-nombre" required>
+								<label for="km-nombre">Nombre</label>
+								<div class="after"></div>
+							</fieldset>
+							<fieldset>
+								<input id="km-apellido" type="text" name="km-apellido" required>
+								<label for="km-apellido">Apellido</label>
+								<div class="after"></div>
+							</fieldset>
+							<fieldset>
+								<input id="km-IFE" type="text" name="km-IFE" required>
+								<label for="km-IFE">IFE/Documento de Identidad</label>
+								<div class="after"></div>
+							</fieldset>
+							<fieldset>
+								<input id="km-correoelectronico" type="text" name="km-correoelectronico" required>
+								<label for="km-correoelectronico">Correo electrónico</label>
+								<div class="after"></div>
+							</fieldset>
+							<fieldset>
+								<input id="km-contraseña" type="text" name="km-contraseña" required>
+								<label for="km-contraseña">Crea tu contraseña</label>
+								<div class="after"></div>
+							</fieldset>
+							<fieldset>
+								<input id="km-telefono" type="text" name="km-telefono" required>
+								<label for="km-telefono">Teléfono</label>
+								<div class="after"></div>
+							</fieldset>
+						</form>
+						<a href="#" class="km-btn-correo">REGISTRARME</a>
+						<p style="color: #979797">Al crear una cuenta, aceptas las condiciones del servicio y la Política de privacidad de Kmimos.</p>
+						<p><b>Dudas escríbenos</b></p>
+						<div class="row">
+							<div class="col-xs-4"><p><img style="width: 20px; margin-right: 5px; position: relative; top: -3px;" src="images/icon/km-redes/icon-wsp.svg">Whatsapp</p></div>
+							<div class="col-xs-4"><p><a href="#"><img style="width: 15px; margin-right: 5px; position: relative; top: -1px;" src="images/icon/km-redes/icon-mail.svg">a.vera@kmimos.la</a></p></div>
+							<div class="col-xs-4"><p><img style="width: 12px; margin-right: 5px; position: relative; top: -1px;" src="images/icon/km-redes/icon-cel.svg">(55) 6178 0320</p></div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-xs-5">
+								<p>¿Ya tienes una cuenta?</p>
+							</div>
+							<div class="col-xs-7">
+								<a href="#" class="km-btn-border km-link-login"><b>INICIAR SESIÓN</b></a>
+							</div>
+						</div>
+					</div>
+					<div class="popup-content-cuidador popup-registro-exitoso">
+						<div class="overlay"></div>
+						<div class="popup-registro-exitoso-text">
+							<h3>¡Genial! María,<br>ya creaste tu perfil como Cuidador Kmimos con éxito</h3>
+							<p style="font-size: 15px;">A mayores datos, mayor ganancia.</p>
+							<p style="font-size: 15px;">Te invitamos a seguir enriqueciendo tu perfil en</p>
+							<h5 style="font-size: 20px">¡3 simples pasos!</h5>
+							<a href="#" class="km-btn">COMENZAR</a>
+						</div>
+					</div>
+					<div class="popup-content-cuidador popup-registro-cuidador-paso1">
+						<h3 style="margin: 0;">Foto de perfil</h5>
+						<p style="color: #979797">Brinda a tus futuros amigos</p>
+						<a href="#"><img src="images/icon/icon-fotoperfil.svg"></a>
+						<a href="#" class="km-btn-border">ACCEDER A TU GALERÍA</a>
+
+						<h3 style="margin: 0;">Descripción de tu perfil</h5>
+						<p style="color: #979797">Preséntate en la comunidad de Cuidadores Kmimos</p>
+						<textarea name="km-descripcion-peril-cuidador" placeholder="Ejemplo: Hola soy María, soy Cuidadora profesional desde hace 15 años, mi familia y yo amamos a los perros, esto no es solo un trabajo sino una pasión para mí, poder darle todo el cuidado y hacerlo sentir en casa es mi propósito. Te garantizo tu mascota regresará feliz."></textarea>
+						<a href="#" class="km-btn-correo">SIGUIENTE</a>
+						<a href="#km-registro-tip1" class="km-registro-tip" role="button" data-toggle="modal"></a>
+					</div>
+					<div class="popup-content-cuidador popup-registro-cuidador-paso2">
+						<h3 style="margin: 0;">Dirección</h5>
+						<p style="color: #979797">Queremos saber tu dirección actual</p>
+						<a href="#" class="km-btn-border">UBICACIÓN ACTUAL</a>
+						<p class="text-line" style="left: 0;">o</p>
+						<div class="bg-line"></div>
+
+						<form class="form-registro" style="margin-bottom: 150px;">
+							<fieldset>
+								<input id="km-estado" type="text" name="km-estado" required>
+								<label for="km-estado">Selección de Estado</label>
+								<div class="after"></div>
+							</fieldset>
+							<fieldset>
+								<input id="km-municipio" type="text" name="km-municipio" required>
+								<label for="km-municipio">Municipio</label>
+								<div class="after"></div>
+							</fieldset>
+							<fieldset>
+								<input id="km-direccion" type="text" name="km-direccion" required>
+								<label for="km-direccion">Dirección</label>
+								<div class="after"></div>
+							</fieldset>
+						</form>
+						<a href="#" class="km-btn-correo">SIGUIENTE</a>
+						<a href="#" class="km-registro-tip" role="button" data-toggle="modal"></a>
+					</div>
+					<div class="popup-content-cuidador popup-registro-cuidador-paso3">
+						<h3 style="margin: 0;">MARÍA,</h5>
+						<h3 style="margin: 0;">¡TE FALTA MUY POCO!</h5>
+						<p style="color: #979797">Llena tus datos para un mayor perfil en la Comunidad Kmimos</p>
+
+						<a href="#" class="km-btn-correo">SIGUIENTE</a>
+						<a href="#" class="km-registro-tip"></a href="#">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN POPUPS REGISTRO -->
 		<!-- SECCIÓN 1 - PARTE FORMULARIO CUIDADOR -->
 		<div class="km-credibilidad">
 			<div class="container">
