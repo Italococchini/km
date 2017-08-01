@@ -1218,6 +1218,7 @@ button.close {
 .km-caja-resultados{
 	padding-top: 41px;
 	padding-bottom: 20px;
+	position: relative;
 }
 
 .km-caja-resultados::after{
@@ -2726,6 +2727,96 @@ footer .km-icon-redes {
 	margin: 95px 0 60px 0;
 }
 
+#map {
+	height: 430px;
+	position: relative;
+	width: 100%;
+}
+
+h1.maps{
+	margin: 0;
+	padding: 5px 0 0 0;
+	font-size: 14px;
+	font-family: 'Gotham-Pro-Bold',arial,sans-serif;
+}
+
+.km-sellos.maps{
+	padding-top: 16px;
+}
+
+.km-opciones.maps{
+	width: 100%;
+	padding: 10px 0 0 0!important;
+}
+
+.km-opciones.maps .precio{
+	text-align: left;
+}
+
+.km-opciones.maps .precio,
+.km-opciones.maps .distancia{
+	text-align: left;
+}
+
+.km-opciones.maps .distancia{
+	margin-bottom: 5px;
+}
+
+.km-caja-resultados .km-columna-der.mapAbsolute{
+	position: absolute;
+	margin-top: 41px;
+	right: 0;
+}
+
+.closeMap{
+	display: none;
+}
+
+
+.btnOpenPopup{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 998;
+	display: none;
+}
+
+.navigation{
+	margin-top: 20px;
+}
+
+.navigation ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.navigation ul li{
+	display: inline-block;
+	text-align: center;
+	min-width: 15px;
+	margin: 0 5px;
+}
+
+.navigation ul li a{
+	color: #000;
+}
+
+.navigation ul li a:hover,
+.navigation ul li.active a{
+	color: #7DD1C4;
+	font-weight: 900;
+}
+
+.navigation .message-nav{
+	padding-top: 15px;
+	text-align: center;
+	font-size: 12px;
+}
+
 /* FIN SECCIÓN RESERVACIÓN */
 
 
@@ -2749,6 +2840,45 @@ footer .km-icon-redes {
 
 
 /* RESPONSIVE */
+@media (min-width: 992px) {
+	.km-caja-resultados .km-columna-der{
+		display: block!important;
+	}
+}
+
+@media (max-width: 991px) {
+	.btnOpenPopup{
+		display: block;
+	}
+
+	.km-titulo-mapa{
+		font-size: 10px;
+	}
+
+	.km-caja-resultados .km-columna-der{
+		display: none;
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: white;
+		padding: 10px;
+	}
+
+	.km-caja-resultados .km-columna-der .closeMap{
+		display: block;
+		float: right;
+	}
+
+	.km-caja-resultados .km-columna-der .km-mapa,
+	.km-caja-resultados .km-columna-der .km-mapa #map{
+		position: relative;
+		height: 100%;
+	}
+}
+
 @media (max-width: 1200px) {
 	/* PÁGINA FICHA CUIDADOR */
 	.km-costo {
@@ -3330,7 +3460,7 @@ footer .km-icon-redes {
 
 @media all and (max-width: 430px) {
 	.km-resultados-lista .km-item-resultado .km-foto{
-		display: none;
+		width: 100%;
 	}
 
 	.km-resultados-lista .km-item-resultado .km-contenedor-descripcion-opciones{
