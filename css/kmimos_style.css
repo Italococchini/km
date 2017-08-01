@@ -38,6 +38,10 @@ img {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
+a {
+	color: black;
+	text-decoration: none;
+}
 b {
 	font-family: 'Gotham-Pro-Medium',arial,sans-serif;
 }
@@ -117,10 +121,23 @@ a:hover {
 	border-radius: 5px;
     color: white;
     text-align: center;
+    font-size: 12px;
     display: block;
     padding: 20px 0;
     line-height: 100%;
     margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+.km-btn-fb:hover {
+	color: white;
+	-webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
 }
 .km-btn-border img, .km-btn-fb img {
     width: 14px;
@@ -138,11 +155,24 @@ a:hover {
 	border: 1px solid black;
 	border-radius: 5px;
     color: black;
+    font-size: 12px;
     text-align: center;
     display: block;
     padding: 20px 0;
     line-height: 100%;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+    transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+.km-btn-border:hover {
+	color: black;
+	-webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
 }
 .km-btn-borderw {
 	background-color: white;
@@ -176,6 +206,28 @@ a:hover {
     width: 100%;
     max-width: 300px;
 }
+.km-btn-basic {
+	background-color: #33E1BE;
+	border-radius: 5px;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    line-height: 100%;
+    /*margin-bottom: 20px;*/
+    transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+.km-btn-basic:hover {
+    color: white;
+-webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
 .km-btn-correo {
 	background-color: #33E1BE;
 	border-radius: 5px;
@@ -185,6 +237,19 @@ a:hover {
     padding: 20px 0;
     line-height: 100%;
     margin-bottom: 20px;
+    font-size: 12px;
+    transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+.km-btn-correo:hover {
+	color: white;
+	-webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.13);
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
 }
 .km-btn-secondary {
 	background-color: #6B1C9B;
@@ -209,6 +274,11 @@ a:hover {
 	text-decoration: none;
 	color: white;
 }
+.line-o {
+	display: block;
+    text-align: left;
+    margin: 40px 0px 20px;
+}
 .text-line {
 	display: inline-block;
     text-align: center;
@@ -220,7 +290,7 @@ a:hover {
 .bg-line {
 	width: 100%;
     height: 1px;
-    background: #979797;
+    background: #d0d0d0;
     margin-top: -20px;
     float: left;
 }
@@ -250,10 +320,42 @@ section {
 	padding: 60px 0;
 }
 
+.km-checkbox {
+  width: 40px;
+  height: 10px;
+  position: relative;
+  background: #98F0DE;
+  border-radius: 50px;
+}
+.km-checkbox label {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  cursor: pointer;
+  background: #33E1BE;
+  border-radius: 50px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.km-checkbox:after {
+	content: 'RECORDARME';
+	position: absolute;
+    left: 54px;
+    top: -1px;
+}
+.km-checkbox input[type=checkbox] {
+  visibility: hidden;
+}
+.km-checkbox input[type=checkbox]:checked + label {
+  left: 30px;
+}
 
-
-
-
+.popuphide {
+	display: none;
+}
 
 
 
@@ -725,55 +827,15 @@ position: absolute;
 	margin-bottom: 0;
 	font-weight: 700;
 }
-
-.km-club input::-webkit-input-placeholder, button {
-	-moz-transition: all .3s ease-in-out;
-	-webkit-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-	font-weight: 700;
+.km-club .form-registro {
+	margin-top: 25px;
 }
-.km-club form {
-	box-sizing: border-box;
-	padding-bottom: 40px;
+.km-club .form-registro fieldset {
+	margin-bottom: 30px;
 }
-.km-club form h1 {
-	box-sizing: border-box;
-	padding: 20px;
+.km-club .form-registro fieldset:last-child {
+	margin-bottom: 60px;
 }
-
-.km-club input {
-	-webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, black 4%);
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, black 4%);
-	background-position: -768px 0;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	margin: 40px 0;
-	width: 100%;
-	display: block;
-	border: none;
-	padding: 17px 0 10px;
-	border-bottom: solid 1px black;
-
-}
-.km-club input:focus, .km-club input:valid {
-  box-shadow: none;
-  outline: none;
-  background-position: 0 0;
-}
-.km-club input:focus::-webkit-input-placeholder, .km-club input:valid::-webkit-input-placeholder {
-  color: #6B1C9B;
-  font-size: 13px;
-  -webkit-transform: translateY(-20px);
-		  transform: translateY(-20px);
-  visibility: visible !important;
-  font-family: 'Gotham-Pro-Regular', arial, sans-serif;
-}
-
-
-
-
 /* SECCIÓN  - KMIMOS VACACIONES */
 .km-vacaciones {
 	background: url(../images/km-vacaciones.gif) no-repeat;
@@ -1870,8 +1932,9 @@ a.km-btn-comentario {
 	color: white;
 }
 /* FIN SECCIÓN CÓMO SER CUIDADOR */
+
 /* POPUPS REGISTRO */
-.popup-registro-cuidador, .popup-registro-cuidador-correo, .popup-registro-cuidador-paso1, .popup-registro-cuidador-paso2, .popup-registro-cuidador-paso3 {
+.popup-registro-cuidador, .popup-registro-cuidador-correo, .popup-registro-cuidador-paso1, .popup-registro-cuidador-paso2, .popup-registro-cuidador-paso3, .popup-iniciar-sesion-1, .popup-registrarte-1, .popup-registrarte-nuevo-correo, .popup-olvidaste-contrasena {
 	padding: 40px 20px;
 }
 
@@ -2790,10 +2853,6 @@ footer .km-icon-redes {
 		border-top: 6px solid #33e1be;
 		top: -1px;
 	}
-	/* HOME */
-
-	/* FIN HOME */
-
 	/* FOOTER */
 	footer .km-icon-redes svg {
 		transition: all .2s ease-in-out;
@@ -3037,6 +3096,11 @@ footer .km-icon-redes {
 		box-shadow: none;
 		padding: 30px 30px;
 	}
+	/* SECCIÓN MEDIOS */
+	/* FIN SECCIÓN MEDIOS */
+
+
+
 	/* SECCIÓN 2 - KMIMOS BENEFICIOS */
 	.km-beneficios {
 		text-align: left;
@@ -3103,6 +3167,9 @@ footer .km-icon-redes {
 	.km-club form {
 		padding-bottom: 0;
 	}
+	.km-medios .col-md-2 {
+		margin-bottom: 20px;
+	}
 	.km-premium-slider .slide {
 		width: 277px!important;
 	}
@@ -3153,7 +3220,6 @@ footer .km-icon-redes {
 		margin: 20px 0 0;
 	}
 	/* FIN PÁGINA QUIERO SER CUIDADOR */
-
 	/* SECCIÓN FOOTER */
 	footer .btn {
 		padding: 10px;

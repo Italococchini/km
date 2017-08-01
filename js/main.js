@@ -199,4 +199,35 @@ $(document).ready(function(){
 		$(".popup-content-cuidador").hide();
 		$(".popup-registro-cuidador").fadeIn("fast");
 	});
+
+	$(document).on("click", '.popup-registro-cuidador-correo .registro-exitoso', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-content-cuidador").hide();
+		$(".popup-registro-exitoso").fadeIn("fast");
+	});
+
+	$(document).on("click", '.paso1', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-content-cuidador").hide();
+		$(".popup-registro-cuidador-paso1").fadeIn("fast");
+	});
+
+	$(document).on("click", '.paso2', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-content-cuidador").hide();
+		$(".popup-registro-cuidador-paso2").fadeIn("fast");
+	});
+
+	// POPUP INICIAR SESIÓN
+	$(document).on("click", '.popup-iniciar-sesion-1 .km-btn-contraseña-olvidada', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-iniciar-sesion-1").hide();
+		$(".popup-olvidaste-contrasena").fadeIn("fast");
+	});
+	// FIN POPUP INICIAR SESIÓN
+
 });
