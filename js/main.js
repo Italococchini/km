@@ -176,9 +176,13 @@ function menu(){
 		$('.bg-transparent').addClass('bg-white');
 		$('.navbar-brand img').attr('src', 'images/km-logos/km-logo-negro.png');
 		$('.navbar-toggle img').attr('src', 'images/km-navbar-mobile-negro.svg');
+		$('.nav-sesion .km-avatar').attr('src', 'images/km-sesion-cliente/avatar.png');
+		$('.nav-sesion .dropdown-toggle img').css('width','40px');
 		$('.nav li a').css('padding','10px 15px 8px');
+		$('.nav-sesion .dropdown-toggle').css('padding','0px');
 		$('.navbar-brand>img').css('height','40px');
 		$('.nav li:first-child a').addClass('pd-tb11');
+		$('.nav-sesion .dropdown-toggle').removeClass('pd-tb11');
 		$('.nav-login').addClass('dnone');
 		$('.navbar').css('padding-top', '15px');
 		if( w >= 768 ){
@@ -188,7 +192,10 @@ function menu(){
 		$('.bg-transparent').removeClass('bg-white');
 		$('.navbar-brand img').attr('src', 'images/km-logos/km-logo.png');
 		$('.navbar-toggle img').attr('src', 'images/km-navbar-mobile.svg');
+		$('.nav-sesion .km-avatar').attr('src', 'images/km-sesion-cliente/avatar.png');
 		$('.nav li a').css('padding','19px 15px 15px');
+		$('.nav-sesion .dropdown-toggle img').css('width','45px');
+		$('.nav-sesion .dropdown-toggle').css('padding','0px');
 		$('.navbar-brand>img').css('height','60px');
 		$('.nav li:first-child a').removeClass('pd-tb11');
 		$('.nav-login').removeClass('dnone');
@@ -238,6 +245,9 @@ $(document).ready(function(){
 		menu();
 	});
 
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
 	$('.bxslider').bxSlider({
 		buildPager: function(slideIndex){
 			switch(slideIndex){
@@ -421,8 +431,65 @@ $(document).ready(function(){
 		$(".popup-iniciar-sesion-1").hide();
 		$(".popup-olvidaste-contrasena").fadeIn("fast");
 	});
-	// FIN POPUP INICIAR SESIÓN
+	$(document).on("click", '.popup-registrarte-1 .km-btn-popup-registrarte-1', function ( e ) {
+		e.preventDefault();
 
+		$(".popup-registrarte-1").hide();
+		$(".popup-registrarte-nuevo-correo").fadeIn("fast");
+	});
+	$(document).on("click", '.popup-registrarte-nuevo-correo .km-btn-popup-registrarte-nuevo-correo', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-registrarte-nuevo-correo").hide();
+		$(".popup-registrarte-datos-mascota").fadeIn("fast");
+	});
+	$(document).on("click", '.popup-registrarte-datos-mascota .km-btn-popup-registrarte-datos-mascota', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-registrarte-datos-mascota").hide();
+		$(".popup-registrarte-final").fadeIn("fast");
+	});
+	// FIN POPUP INICIAR SESIÓN
+	$(document).on("click", '.popup-registro-cuidador .km-btn-popup-registro-cuidador', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-registro-cuidador").hide();
+		$(".popup-registro-cuidador-correo").fadeIn("fast");
+	});
+	$(document).on("click", '.popup-registro-cuidador-correo .km-btn-popup-registro-cuidador-correo', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-registro-cuidador-correo").hide();
+		$(".popup-registro-exitoso").fadeIn("fast");
+	});
+	$(document).on("click", '.popup-registro-exitoso .km-btn-popup-registro-exitoso', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-registro-exitoso").hide();
+		$(".popup-registro-cuidador-paso1").fadeIn("fast");
+	});
+
+	$(document).on("click", '.popup-registro-cuidador-paso1 .km-btn-popup-registro-cuidador-paso1', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-registro-cuidador-paso1").hide();
+		$(".popup-registro-cuidador-paso2").fadeIn("fast");
+	});
+	$(document).on("click", '.popup-registro-cuidador-paso2 .km-btn-popup-registro-cuidador-paso2', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-registro-cuidador-paso2").hide();
+		$(".popup-registro-cuidador-paso3").fadeIn("fast");
+	});
+	$(document).on("click", '.popup-registro-cuidador-paso3 .km-btn-popup-registro-cuidador-paso3', function ( e ) {
+		e.preventDefault();
+
+		$(".popup-registro-cuidador-paso3").hide();
+		$(".popup-registro-exitoso-final").fadeIn("fast");
+	});
+	// POPUP REGISTRO CUIDADOR
+
+	// FIN POPUP REGISTRO CUIDADOR
 
 	$(document).on("click", '.km-caja-resultados .km-columna-der .closeMap', function ( e ) {
 		e.preventDefault();
