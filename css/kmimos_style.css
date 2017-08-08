@@ -1150,7 +1150,7 @@ button.close {
 	margin-top: 9px;
 }
 
-.km-search-slider .bx-controls{
+.km-search-slider .bx-controls .bx-pager{
 	display: none;
 }
 
